@@ -1,5 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin') //installed via npm
-const webpack = require('webpack') //to access built-in plugins
+const HtmlWebpackPlugin = require('html-webpack-plugin') // installed via npm
+require('webpack') // to access built-in plugins
 const path = require('path')
 
 const config = {
@@ -27,7 +27,12 @@ const config = {
       template: './src/index.html',
       filename: 'index.html'
     })
-  ]
-};
+  ],
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  }
+}
 
-module.exports = config;
+module.exports = config
