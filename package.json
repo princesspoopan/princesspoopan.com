@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open --hot",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,7 @@
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^2.30.1",
     "http-server": "^0.10.0",
+    "react-hot-loader": "next",
     "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1",
     "yarn": "^0.27.5"

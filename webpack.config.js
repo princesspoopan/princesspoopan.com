@@ -3,7 +3,12 @@ const webpack = require('webpack') //to access built-in plugins
 const path = require('path')
 
 const config = {
-  entry: './src/App.react.js',
+  entry: {
+    'app': [
+      'react-hot-loader/patch',
+      './src/App.react.js'
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'js/bundle.js'

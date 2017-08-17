@@ -14,7 +14,9 @@ export default class Message extends React.Component {
           textAlign: 'center',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          fontFamily: "'Great Vibes', cursive",
+          fontSize: '55px'
         }}
       >
         princesspoopan.com is coming soon...
