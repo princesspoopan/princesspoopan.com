@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 const App = () => {
-  return ReactDOM.render(
+  ReactDOM.render(
     <AppContainer>
       <Message/>
     </AppContainer>,
@@ -15,7 +15,7 @@ const App = () => {
 // Hot Module Replacement API
 if (module.hot) {
   module.hot.accept('./components/Message.react', () => {
-    const NextMessage = require('./components/Message.react').default;
+    const NextMessage = require('./components/Message.react').default
     ReactDOM.render(
       <AppContainer>
         <NextMessage/>

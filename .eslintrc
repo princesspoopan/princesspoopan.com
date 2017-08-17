@@ -1,0 +1,14 @@
+{
+  "extends": [ "standard", "plugin:react/recommended" ],
+  "rules": {
+    "indent": [2, 2],
+    "linebreak-style": [2, "unix"],
+    "quotes": [2, "single"],
+    "semi": [2, "never"],
+
+    "no-cond-assign": [2, "always"],
+
+    "no-console": 2,
+  },
+  "plugins": [ "react" ]
+}
