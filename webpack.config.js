@@ -11,7 +11,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'js/bundle.js'
+    filename: 'js/bundle.js?' + (new Date()).getTime()
   },
   module: {
     rules: [
