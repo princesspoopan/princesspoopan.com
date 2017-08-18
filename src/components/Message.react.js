@@ -19,7 +19,7 @@ export default class Message extends React.Component {
         fontSize: '55px',
         margin: '0px'
       }}>
-        princesspoopan.com is coming very soon {'<3'}...
+        princesspoopan.com is coming very soon...
       </h1>
     )
   }
