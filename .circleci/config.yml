@@ -7,4 +7,9 @@ jobs:
        - checkout
        - run: npm install yarn && yarn
        - run: yarn run test
-       - run: echo "princesspoopan.com is built"
+       - deploy:
+          name: deploy to princesspoopan.com
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              yarn run build && ./scripts/deployment.sh
+            fi
