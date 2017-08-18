@@ -16,9 +16,10 @@ export default class Message extends React.Component {
         alignItems: 'center',
         justifyContent: 'center',
         fontFamily: '\'Great Vibes\', cursive',
-        fontSize: '55px'
+        fontSize: '55px',
+        margin: '0px'
       }}>
-        princesspoopan.com is coming very soon...
+        princesspoopan.com is coming very soon {'<3'}...
       </h1>
     )
   }
