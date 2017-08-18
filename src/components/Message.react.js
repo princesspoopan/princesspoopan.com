@@ -9,7 +9,7 @@ export default class Message extends React.Component {
         right: 0,
         bottom: 0,
         left: 0,
-        backgroundColor: '#ff3399',
+        backgroundColor: '#ff4888',
         color: '#fff',
         textAlign: 'center',
         display: 'flex',
