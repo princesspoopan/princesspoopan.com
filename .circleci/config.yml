@@ -5,4 +5,6 @@ jobs:
        - image: circleci/node:7.10.0
      steps:
        - checkout
+       - run: npm install yarn && yarn
+       - run: yarn run test
        - run: echo "princesspoopan.com is built"

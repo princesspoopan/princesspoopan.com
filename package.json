@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --open --hot",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p",
-    "test": "karma start karma.conf.js",
+    "test": "karma start karma.conf.js --singleRun",
+    "test:watch": "karma start karma.conf.js",
     "lint": "eslint src"
   },
   "repository": {
