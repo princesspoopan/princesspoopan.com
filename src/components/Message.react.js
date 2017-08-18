@@ -18,7 +18,7 @@ export default class Message extends React.Component {
         fontFamily: '\'Great Vibes\', cursive',
         fontSize: '55px'
       }}>
-        princesspoopan.com is coming soon...
+        princesspoopan.com is coming very soon...
       </h1>
     )
   }
