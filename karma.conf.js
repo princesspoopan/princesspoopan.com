@@ -12,10 +12,7 @@ module.exports = function (config) {
     frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
-    files: [
-      'src/**/*.spec.js',
-      'src/*.spec.js'
-    ],
+    files: [ 'src/**/*.spec.js' ],
 
     webpack: { // kind of a copy of your webpack config
       devtool: 'inline-source-map', // just do inline source maps instead of the default
@@ -43,13 +40,13 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '**/*.spec.js': [ 'webpack' ]
+      '**/*.spec.js': [ 'webpack', 'coverage' ]
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
     // web server port
     port: 9876,
@@ -79,7 +76,14 @@ module.exports = function (config) {
     plugins: [
       'karma-webpack',
       'karma-mocha',
-      'karma-phantomjs-launcher'
-    ]
+      'karma-phantomjs-launcher',
+      'karma-coverage'
+    ],
+
+    // optionally, configure the reporter
+    coverageReporter: {
+      type: 'html',
+      dir: 'coverage/'
+    }
   })
 }
