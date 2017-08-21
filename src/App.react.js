@@ -2,6 +2,7 @@ import { AppContainer } from 'react-hot-loader'
 import Message from './components/Message.react'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import registerServiceWorker from 'serviceworker!./sw.js'
 
 const App = () => {
   ReactDOM.render(
@@ -24,5 +25,14 @@ if (module.hot) {
     )
   })
 }
+
+registerServiceWorker({ scope: '/' })
+  .then(function (reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope)
+  }).catch(function (error) {
+    // registration failed
+    console.log('Registration failed with ' + error)
+  })
 
 App()

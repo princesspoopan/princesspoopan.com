@@ -5,10 +5,11 @@
     "linebreak-style": [2, "unix"],
     "quotes": [2, "single"],
     "semi": [2, "never"],
+    "no-webpack-loader-syntax": 0,
 
     "no-cond-assign": [2, "always"],
 
-    "no-console": 2,
+    "no-console": 1,
   },
   "plugins": [ "react" ],
   "env": {
