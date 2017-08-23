@@ -15,11 +15,11 @@ export default class Message extends React.Component {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        fontFamily: '\'Great Vibes\', cursive',
-        fontSize: '55px',
+        fontFamily: '\'Source Code Pro\', monospace',
+        fontSize: '45px',
         margin: '0px'
       }}>
-        princesspoopan.com is coming very soon...
+        {'isHappy(me.feel) ? me.code() : me.sleep()'}
       </h1>
     )
   }

@@ -19,17 +19,13 @@ echo '######### clone princesspoopan.github.io #########'
 git clone git@github.com:princesspoopan/princesspoopan.github.io.git
 echo ''
 
+echo '######### copy items from build #########'
 cd princesspoopan.github.io
-echo '######### delete previous index.html and js folder #########'
-rm index.html && rm -rf js
-echo
-
-echo '######### copy index and js folder from build #########'
-cp ../build/index.html ./ && cp -r ../build/js ./
+yes | cp -rf ../build/* ./
 echo ''
 
 echo '######### commit and push to github #########'
-git commit --allow-empty -a -m ':rocket: auto deployment'
+git add . && git commit --allow-empty -a -m ':rocket: auto deployment'
 git push -f
 echo ''
 

@@ -1,4 +1,4 @@
-/* global self Response */
+/* global self caches fetch */
 
 // The SW will be shutdown when not in use to save memory,
 // be aware that any global state is likely to disappear
@@ -6,13 +6,23 @@ console.log('SW startup')
 
 self.addEventListener('install', function (event) {
   console.log('SW installed')
-})
-
-self.addEventListener('activate', function (event) {
-  console.log('SW activated')
+  event.waitUntil(
+    caches.open('princesspoopan.com').then(function (cache) {
+      return cache.addAll([
+        'index.html',
+        '/js/bundle.js',
+        'https://fonts.googleapis.com/css?family=Great+Vibes',
+        'https://fonts.gstatic.com/s/greatvibes/v4/6q1c0ofG6NKsEhAc2eh-3Ygp9Q8gbYrhqGlRav_IXfk.woff2'
+      ])
+    })
+  )
 })
 
 self.addEventListener('fetch', function (event) {
-  console.log('Caught a fetch!')
-  event.respondWith(new Response('Hello world!'))
+  console.log('SW Fetched')
+  event.respondWith(
+    fetch(event.request).catch(function () {
+      return caches.match(event.request)
+    })
+  )
 })

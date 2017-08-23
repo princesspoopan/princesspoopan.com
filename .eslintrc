@@ -5,7 +5,7 @@
     "linebreak-style": [2, "unix"],
     "quotes": [2, "single"],
     "semi": [2, "never"],
-    "no-webpack-loader-syntax": 0,
+    "import/no-webpack-loader-syntax": 0,
 
     "no-cond-assign": [2, "always"],
 

@@ -2,7 +2,7 @@ import { AppContainer } from 'react-hot-loader'
 import Message from './components/Message.react'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import registerServiceWorker from 'serviceworker!./sw.js'
+import registerServiceWorker from 'serviceworker-loader!./sw.js'
 
 const App = () => {
   ReactDOM.render(

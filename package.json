@@ -47,6 +47,7 @@
     "react-addons-test-utils": "^15.6.0",
     "react-hot-loader": "next",
     "react-test-renderer": "^15.6.1",
+    "serviceworker-loader": "^0.1.0",
     "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1",
     "yarn": "^0.27.5"
