@@ -15,7 +15,9 @@ const config = {
   },
   module: {
     rules: [
-      { test: /\.js$/, use: 'babel-loader' }
+      { test: /\.js$/, use: 'babel-loader' },
+      { test: /\.styl$/, use: [ 'style-loader', 'css-loader', 'stylus-loader' ] },
+      { test: /\.(png|svg|jpg|gif|jpeg)$/, use: [ 'file-loader' ] }
     ]
   },
   devServer: {
