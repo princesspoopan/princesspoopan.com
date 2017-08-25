@@ -2,7 +2,7 @@ import './Message.styl'
 
 import React from 'react'
 
-export default class Message extends React.Component {
+export default class Message extends React.PureComponent {
   render () {
     return (
       <h1 className='message'>
