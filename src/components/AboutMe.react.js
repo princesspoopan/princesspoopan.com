@@ -1,35 +1,41 @@
 import './AboutMe.styl'
 
 import React from 'react'
+import propTypes from 'prop-types'
 
-export default function AboutMe () {
+export default function AboutMe ({ onStartWaterFall }) {
   return (
     <div className='about-me'>
-      <div className='about-me__header'>
-        <img src={require('./rose.png')} className='about-me__icon' />
-        <div className='about-me__text'>
-          <div className='about-me__name' >Krongkarn Jitsil</div>
-          <div className='about-me__portals'>
-            <div className='about-me__code-name --special-text'>@princesspoopan</div>
-            <a
-              target='blank'
-              className='about-me__link'
-              href='https://github.com/princesspoopan'
-            >
-              <img src={require('./github.png')} />
-            </a>
-            <a
-              target='blank'
-              className='about-me__link'
-              href='https://www.linkedin.com/in/princesspoopan/'
-            >
-              <img src={require('./linkedIn.png')} />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className='about-me__layout'>
+      <div className='about-me__body'>
         <div className='about-me__layout-left'>
+          <div className='about-me__header'>
+            <img src={require('./rose.png')} className='about-me__icon' />
+            <div className='about-me__text'>
+              <div className='about-me__name' >Krongkarn Jitsil</div>
+              <div className='about-me__portals'>
+                <div
+                  className='about-me__code-name --special-text'
+                  onClick={onStartWaterFall}
+                >
+                  @princesspoopan
+                </div>
+                <a
+                  target='blank'
+                  className='about-me__link'
+                  href='https://github.com/princesspoopan'
+                >
+                  <img src={require('./github.png')} />
+                </a>
+                <a
+                  target='blank'
+                  className='about-me__link'
+                  href='https://www.linkedin.com/in/princesspoopan/'
+                >
+                  <img src={require('./linkedIn.png')} />
+                </a>
+              </div>
+            </div>
+          </div>
           <div className='about-me__summary'>
             <div className='about-me__principle'>
               Working in the <span className='--special-text'>web development</span> field for eight years, with both enterprise and start up companies.&nbsp;
@@ -58,4 +64,6 @@ export default function AboutMe () {
   )
 }
 
-// <img src={require('./me.jpeg')} className='about-me__avatar'/>
+AboutMe.propTypes = {
+  onStartWaterFall: propTypes.func.isRquired
+}

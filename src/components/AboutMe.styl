@@ -1,3 +1,5 @@
+@import "../style/animation.styl"
+
 .about-me
   padding 30px
   position absolute
@@ -10,7 +12,7 @@
   font-family 'Source Code Pro', monospace
   color #008289
 
-  &__layout
+  &__body
     display flex
 
   .\\--special-text
@@ -55,7 +57,7 @@
 
   &__avatar
     border 2px dashed #fff
-    height 50vh
+    height 60vh
     border-radius 10px
     box-shadow 2px 2px 20px #382807
     animation swing ease-in-out 1.5s infinite alternate
@@ -81,6 +83,7 @@
     img
       width 25px
       height 25px
+      cursor pointer
 
       &:hover
         box-sizing border-box
@@ -103,22 +106,3 @@
     > img
       height 25px
       margin-left 10px
-
-
-neon-shadow(color1, color2)
-  0%, 100% { text-shadow: 0 0 5vw color1, 5px 5px 0.5vw color1 }
-  50% { text-shadow: 0 0 1vw color2 }
-
-@keyframes swing {
-  0% {transform:rotate(5deg)}
-  100% {transform:rotate(-5deg)}
-}
-
-@keyframes neon-pink {
-  neon-shadow(#f2527a, #fff2e5)
-}
-
-@keyframes spin {
-  0% {transform:rotate(0deg)}
-  100% {transform:rotate(360deg)}
-}

@@ -1,0 +1,17 @@
+neon-shadow(color1, color2)
+  0%, 100% { text-shadow: 0 0 5vw color1, 5px 5px 0.5vw color1 }
+  50% { text-shadow: 0 0 1vw color2 }
+
+@keyframes swing {
+  0% {transform:rotate(5deg)}
+  100% {transform:rotate(-5deg)}
+}
+
+@keyframes neon-pink {
+  neon-shadow(#f2527a, #fff2e5)
+}
+
+@keyframes spin {
+  0% {transform:rotate(0deg)}
+  100% {transform:rotate(360deg)}
+}
