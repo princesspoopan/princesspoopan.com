@@ -26,7 +26,7 @@ if (module.hot) {
   })
 }
 
-registerServiceWorker({ scope: '/' })
+navigator.serviceWorker && registerServiceWorker({ scope: '/' })
   .then(function (reg) {
     // registration worked
     console.log('Registration succeeded. Scope is ' + reg.scope)

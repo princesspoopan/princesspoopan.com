@@ -1,13 +1,13 @@
 import './FrontPage.styl'
 
-import Introduction from '../components/Introduction.react'
+import AboutMe from '../components/AboutMe.react'
 import React from 'react'
 
 export default function FrontPage () {
   return (
     <div className='front-page'>
       <div className='front-page__center'>
-        <Introduction />
+        <AboutMe />
       </div>
     </div>
   )
