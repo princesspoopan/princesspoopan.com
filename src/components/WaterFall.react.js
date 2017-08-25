@@ -20,7 +20,7 @@ export default class WaterFall extends React.PureComponent {
               href: 'https://github.com/princesspoopan'
             } : {
               source: require('./linkedIn.png'),
-              href: 'https://www.linkedin.com/princesspoopan'
+              href: 'https://www.linkedin.com/in/princesspoopan'
             }
             return (
               <a

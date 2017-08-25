@@ -21,7 +21,12 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: './build'
+    contentBase: './build',
+    historyApiFallback: {
+      rewrites: [
+        { from: /favicon.ico/, to: './src/favicon.ico' }
+      ]
+    }
   },
   plugins: [
     // new webpack.optimize.UglifyJsPlugin(),

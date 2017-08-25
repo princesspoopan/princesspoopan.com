@@ -17,14 +17,18 @@ module.exports = function (config) {
     webpack: { // kind of a copy of your webpack config
       devtool: 'inline-source-map', // just do inline source maps instead of the default
       module: {
-        loaders: [{
-          test: /\.js$/,
-          exclude: /\/node_modules\//,
-          loader: 'babel-loader',
-          query: {
-            presets: [['es2015', {modules: false}], 'airbnb']
-          }
-        }]
+        loaders: [
+          {
+            test: /\.js$/,
+            exclude: /\/node_modules\//,
+            loader: 'babel-loader',
+            query: {
+              presets: [['es2015', {modules: false}], 'airbnb']
+            }
+          },
+          { test: /\.styl$/, use: [ 'style-loader', 'css-loader', 'stylus-loader' ] },
+          { test: /\.(png|svg|jpg|gif|jpeg)$/, use: [ 'file-loader' ] }
+        ]
       },
       externals: {
         'react/addons': true,

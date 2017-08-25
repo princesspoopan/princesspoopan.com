@@ -4,6 +4,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 
 export default function AboutMe ({ onStartWaterFall }) {
+  console.log(typeof onStartWaterFall)
   return (
     <div className='about-me'>
       <div className='about-me__body'>
@@ -65,5 +66,5 @@ export default function AboutMe ({ onStartWaterFall }) {
 }
 
 AboutMe.propTypes = {
-  onStartWaterFall: propTypes.func.isRquired
+  onStartWaterFall: propTypes.func.isRequired
 }
