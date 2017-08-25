@@ -44,6 +44,22 @@ export default function AboutMe ({ onStartWaterFall }) {
               &nbsp;I beleive <span className='--special-text'>putting your heart</span> into what you do, is as important as <span className='--special-text'>technical skills</span> you should have.
             </div>
           </div>
+          <div className='about-me__buttons'>
+            <a
+              className='about-me__button'
+              target='tab'
+              href='https://www.visualcv.com/krongkarnjitsil/pdf'
+            >
+              Need Web Developer?
+            </a>
+            <a
+              className='about-me__button'
+              target='tab'
+              href='https://www.linkedin.com/in/princesspoopan/detail/recommendation/write/'
+            >
+              Want to recommend me...
+            </a>
+          </div>
         </div>
         <div className='about-me__layout-right'>
           <img src={require('./me.jpeg')} className='about-me__avatar'/>
@@ -51,15 +67,25 @@ export default function AboutMe ({ onStartWaterFall }) {
       </div>
       <div className='about-me__footer'>
         <span className='about-me__powered-by-text'>Powered by: </span>
-        <img src={require('./react-logo.png')} className='about-me__powered-by-logo'/>
-        <img src={require('./webpack-logo.png')} className='about-me__powered-by-logo'/>
-        <img src={require('./yarn-logo.png')} className='about-me__powered-by-logo'/>
-        <img
-          src={require('./nodejs-logo.png')}
-          style={{ position: 'relative', top: '-4px' }}
-          className='about-me__powered-by-logo'
-        />
-        <img src={require('./circleci-logo.png')} className='about-me__powered-by-logo'/>
+        <a target='reference' href='https://facebook.github.io/react/'>
+          <img src={require('./react-logo.png')} className='about-me__powered-by-logo'/>
+        </a>
+        <a target='reference' href='https://webpack.js.org/'>
+          <img src={require('./webpack-logo.png')} className='about-me__powered-by-logo'/>
+        </a>
+        <a target='reference' href='https://yarnpkg.com/en/'>
+          <img src={require('./yarn-logo.png')} className='about-me__powered-by-logo'/>
+        </a>
+        <a target='reference' href='https://nodejs.org/en/'>
+          <img
+            src={require('./nodejs-logo.png')}
+            style={{ position: 'relative', top: '-4px' }}
+            className='about-me__powered-by-logo'
+          />
+        </a>
+        <a target='reference' href='https://circleci.com/'>
+          <img src={require('./circleci-logo.png')} className='about-me__powered-by-logo'/>
+        </a>
       </div>
     </div>
   )

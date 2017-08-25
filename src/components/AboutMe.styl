@@ -1,5 +1,8 @@
 @import "../style/animation.styl"
 
+gradient-bg()
+  background linear-gradient(330deg, #27a6d8 14%,#fc558b 51%,#27a6d8 100%)
+
 .about-me
   padding 30px
   position absolute
@@ -16,7 +19,7 @@
     display flex
 
   .\\--special-text
-    background linear-gradient(330deg, #27a6d8 14%,#fc558b 51%,#27a6d8 100%)
+    gradient-bg()
     -webkit-background-clip text
     -webkit-text-fill-color transparent
     font-weight 800
@@ -85,11 +88,27 @@
       height 25px
       cursor pointer
 
-      &:hover
-        box-sizing border-box
-        border 2px solid #fff
-        border-radius 50%
-        animation spin 1s infinite linear
+    img:hover
+      box-sizing border-box
+      border 2px solid #fff
+      border-radius 50%
+      animation spin 1s infinite linear
+
+  &__buttons
+    margin-top 30px
+
+  &__button
+    margin-right 50px
+    padding 10px
+    color #f0e7d8
+    text-decoration none
+    gradient-bg()
+    border-radius 10px
+    box-shadow 2px 2px 3px #9e9e9e
+    cursor pointer
+
+    &:active
+      box-shadow none
 
   &__footer
     position absolute
@@ -103,6 +122,8 @@
     justify-content center
     font-size 12px
 
-    > img
-      height 25px
+    a
       margin-left 10px
+
+    img
+      height 25px
