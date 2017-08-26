@@ -2,26 +2,33 @@ import './FrontPage.styl'
 
 import AboutMe from '../components/AboutMe.react'
 import React from 'react'
-import WaterFall from '../components/WaterFall.react'
+import Transition from 'react-transition-group/Transition'
 
-export default class FrontPage extends React.PureComponent {
-  constructor (props) {
-    super(props)
-    this.state = {showWaterFall: false}
-  }
+const duration = 1000
 
-  render () {
-    return (
-      <div className='front-page'>
-        <div className='front-page__center'>
-          <AboutMe onStartWaterFall={() => this.setState({showWaterFall: true})} />
-          {
-            this.state.showWaterFall && (
-              <WaterFall onStopWaterFall={() => this.setState({showWaterFall: false})} />
-            )
-          }
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-in-out`,
+  opacity: 0
+}
+
+const transitionStyles = {
+  entering: { opacity: 0 },
+  entered: { opacity: 1 }
+}
+
+export default function FrontPage () {
+  return (
+    <Transition in appear timeout={duration}>
+      {(state) => (
+        <div style={{ ...defaultStyle, ...transitionStyles[state] }}>
+          <div className='front-page'>
+            <div className='front-page__bg' />
+            <div className='front-page__center'>
+              <AboutMe />
+            </div>
+          </div>
         </div>
-      </div>
-    )
-  }
+      )}
+    </Transition>
+  )
 }

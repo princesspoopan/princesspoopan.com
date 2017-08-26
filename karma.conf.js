@@ -23,7 +23,7 @@ module.exports = function (config) {
             exclude: /\/node_modules\//,
             loader: 'babel-loader',
             query: {
-              presets: [['es2015', {modules: false}], 'airbnb']
+              presets: [['env', {modules: false}], 'airbnb']
             }
           },
           { test: /\.styl$/, use: [ 'style-loader', 'css-loader', 'stylus-loader' ] },
