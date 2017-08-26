@@ -1,4 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin') // installed via npm
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 require('webpack') // to access built-in plugins
 const path = require('path')
 
@@ -29,7 +30,7 @@ const config = {
     }
   },
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin(),
+    new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html'
