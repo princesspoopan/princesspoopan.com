@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../fonts/BebasNeueBook.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url('../fonts/RobotoSlab-Regular.woff') format('woff');
+  font-style: normal;
+}
+
+body {
+  font-family: 'BebasNeue';
+}

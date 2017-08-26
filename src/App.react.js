@@ -1,3 +1,5 @@
+import './css/style.css'
+
 import { AppContainer } from 'react-hot-loader'
 import CV from './pages/CV.react'
 import React from 'react'

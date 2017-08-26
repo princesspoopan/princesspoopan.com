@@ -17,8 +17,9 @@ const config = {
   module: {
     rules: [
       { test: /\.js$/, use: 'babel-loader', exclude: '/node_modules/' },
-      { test: /\.styl$/, use: [ 'style-loader', 'css-loader', 'stylus-loader' ] },
-      { test: /\.(png|svg|jpg|gif|jpeg)$/, use: [ 'file-loader' ] }
+      { test: /\.(css|styl)$/, use: [ 'style-loader', 'css-loader', 'stylus-loader' ] },
+      { test: /\.(png|svg|jpg|gif|jpeg)$/, use: [ 'file-loader' ] },
+      { test: /\.(woff|woff2|eot|ttf|otf)$/, use: [ 'file-loader' ] }
     ]
   },
   devServer: {
