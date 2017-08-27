@@ -1,7 +1,7 @@
 import './css/style.css'
 
 import { AppContainer } from 'react-hot-loader'
-import CV from './pages/CV.react'
+import Home from './pages/Home.react'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from 'serviceworker-loader!./sw.js'
@@ -9,7 +9,7 @@ import registerServiceWorker from 'serviceworker-loader!./sw.js'
 const App = () => {
   ReactDOM.render(
     <AppContainer>
-      <CV/>
+      <Home />
     </AppContainer>,
     document.getElementById('main')
   )
@@ -17,11 +17,11 @@ const App = () => {
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./pages/CV.react', () => {
-    const NextCV = require('./pages/CV.react').default
+  module.hot.accept('./pages/Home.react', () => {
+    const NextHome = require('./pages/Home.react').default
     ReactDOM.render(
       <AppContainer>
-        <NextCV/>
+        <NextHome />
       </AppContainer>,
       document.getElementById('main')
     )
