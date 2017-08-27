@@ -19,7 +19,7 @@ export default function AboutMe () {
       </div>
       <div className='about-me__summary'>
         Full Stack Web developer with 8 years of experiences in enterprises and start-up companies.
-        Mastering in JavaScript with cutting edge technology stacks.
+        Mastering in JavaScript with cutting edge technology stack.
       </div>
       <div className='about-me__buttons'>
         <a
