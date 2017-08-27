@@ -1,0 +1,24 @@
+@import "../css/colors.styl"
+
+.detail-list
+
+  &__item
+    display flex
+
+    &:nth-last-child(1) > .detail-list__item-text
+      border-bottom none
+
+  &__item-icon
+    padding 32px 15px
+    width 16px
+
+    // HACK: to adjust smaller icon size
+    &.fa-user
+      padding-right 19px
+
+  &__item-text
+    display block
+    width 100%
+    padding 30px 10px 20px 0px
+    line-height 20px
+    border-bottom 1px solid c-white

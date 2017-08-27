@@ -33,7 +33,7 @@ export default function AboutMe () {
         <a
           className='about-me__button --attention'
           target='blank'
-          href='https://www.visualcv.com/krongkarnjitsil/pdf'
+          href='https://www.dropbox.com/s/y8asv7wmvxajofq/Krongkarn%20Jitsil%27s%20CV.pdf?dl=0'
         >
           <span>Looking for Web Developer</span>
         </a>
