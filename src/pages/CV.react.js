@@ -19,9 +19,12 @@ export default function CV () {
               items={[
                 {
                   icon: 'user',
-                  children: 'You can call me Poopan. I am full stack Web Engineer currently based in Bangkok. ' +
-                    'I like to resolve challenging problems, ' +
-                    'developing rich web experiences & web applications'
+                  children: (
+                    <div className='cv__about-me-description'>
+                      You can call me Poopan. I am full stack Web Engineer currently based in Bangkok.
+                      I like to resolve challenging problems, developing rich web experiences & web applications
+                    </div>
+                  )
                 },
                 {
                   icon: 'phone',
@@ -73,16 +76,30 @@ export default function CV () {
                         items={[
                           {
                             key: 'team-lead-at-taskworld',
-                            header: 'Web Engineer Team Lead @ Taskworld co., ltd',
+                            header: (
+                              <span className='cv__work-experiences-title'>
+                                Web Engineer Team Lead
+                                <span className='cv__work-experiences-company'>
+                                  @Taskworld co., ltd
+                                </span>
+                              </span>
+                            ),
                             subHeader: 'Nov 2016 — Present',
                             text: 'Manage Frontend development team, to maintenance ' +
-                            'and improve significant features in Taskworld in both web base ' +
+                            'and improve significant features in Taskworld in both web-based ' +
                             'and mobile application. Also do code review, pair programming and ' +
                             'help new team members to get onboard'
                           },
                           {
                             key: 'web-engineer-at-taskworld',
-                            header: 'Web Engineer',
+                            header: (
+                              <span className='cv__work-experiences-title'>
+                                Web Engineer
+                                <span className='cv__work-experiences-company'>
+                                  @Taskworld co., ltd
+                                </span>
+                              </span>
+                            ),
                             subHeader: 'Nov 2015 — Oct 2016',
                             text: 'Full stack developer, implement and improve significant features, ' +
                             'such as Chat, Kanban board, Project Page to build and release ' +
@@ -91,27 +108,50 @@ export default function CV () {
                           },
                           {
                             key: 'sr-software-engineer-at-tr',
-                            header: 'Senior Software Engineer',
+                            header: (
+                              <span className='cv__work-experiences-title'>
+                                Senior Software Engineer
+                                <span className='cv__work-experiences-company'>
+                                  @Thomson Reuters Software Thailand
+                                </span>
+                              </span>
+                            ),
                             subHeader: 'Mar 2013 — Oct 2015',
-                            text: 'Full stack developer, to build web application called What\'s' +
-                            'New to distribute news, articles and feature' +
+                            text: 'Full stack developer, to build web application called What\'s New ' +
+                            'to distribute news, articles and feature ' +
                             'releases using NodeJS, WCF, AngularJS'
                           },
                           {
                             key: 'software-engineer-at-tr',
-                            header: 'Software Engineer',
+                            header: (
+                              <span className='cv__work-experiences-title'>
+                                Software Engineer
+                                <span className='cv__work-experiences-company'>
+                                  @Thomson Reuters Software Thailand
+                                </span>
+                              </span>
+                            ),
                             subHeader: 'May 2011 — Feb 2013',
                             text: (
                               <div>
                                 <div>&#9675; Build CMS for manage web pages in the main application of Thomson Reuters Eikon</div>
+                                <div>&nbsp;</div>
                                 <div>&#9675; Implement and maintenance realtime data in Thomson Reuters Eikon Assets using JavaScript</div>
+                                <div>&nbsp;</div>
                                 <div>&#9675; Maintenance main home pages in Thomson Reuters Eikon</div>
                               </div>
                             )
                           },
                           {
                             key: 'associate-software-engineer-at-tr',
-                            header: 'Associate Software Engineer',
+                            header: (
+                              <span className='cv__work-experiences-title'>
+                                Associate Software Engineer
+                                <span className='cv__work-experiences-company'>
+                                  @Thomson Reuters Software Thailand
+                                </span>
+                              </span>
+                            ),
                             subHeader: 'May 2009 — Apr 2011',
                             text: 'View development, to build web pages and be ' +
                             'the part of launching the first version of ' +
@@ -146,7 +186,7 @@ export default function CV () {
                               header: 'Programming languages/Library',
                               text: (
                                 <div className='cv__skill-items'>
-                                  HTML / CSS / JavaScript / ReactJS / Redux / AngularJS
+                                  HTML / CSS / JavaScript / ReactJS / Redux / PHP / AngularJS
                                   / NodeJS / Express / Karma / Enzyme / Jest / Selenium
                                 </div>
                               )
