@@ -6,10 +6,10 @@
 
 
 ### Technology Stack
-⋅⋅* ReactJS
-⋅⋅* Webpack
-⋅⋅* Karma
-⋅⋅* Yarn
+* ReactJS
+* Webpack
+* Karma
+* Yarn
 
 ### How to run the project
 `yarn && yarn run dev`
