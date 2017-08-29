@@ -6,7 +6,7 @@
 
 
 ### Technology Stack
-* ReactJS
+* React
 * Webpack
 * Karma
 * Yarn
