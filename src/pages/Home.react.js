@@ -1,27 +1,34 @@
 import './Home.styl'
 
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 export default function Home () {
   return (
-    <div className='home__bg'>
-      <div className='home__header'>
-        <img className='home__image' src={require('./header.jpg')} />
-      </div>
-      <div className='home__body'>
-        <div className='home__hello'>Hello</div>
-        <div className='home__intro-myself'>
-          {'I\'M'}
-          <div className='home__my-name'>
-            KRONGKARN JITSIL
+    <div className='home'>
+      <div className='home__bg'>
+        <div className='home__header' />
+        <div className='home__body'>
+          <div className='home__hello'>Hello</div>
+          <div className='home__intro-myself'>
+            {'I\'M'}
+            <div className='home__my-name'>
+              KRONGKARN
+              <br/>
+              JITSIL
+            </div>
           </div>
-          WEB/SOFTWARE ENGINEER
-        </div>
-        <Navigator />
-        <div className='home__buttons'>
-          <Button>get in touch with me</Button>
-          <Button>view full cv as pdf</Button>
+          <div className='home__occupation'>
+            WEB/SOFTWARE ENGINEER
+          </div>
+          <div className='home__buttons'>
+            <Button>get in touch with me</Button>
+            <Button to='/cv'>view full cv as pdf</Button>
+          </div>
+          <div className='home__navigator'>
+            <Navigator>About me</Navigator>
+          </div>
         </div>
       </div>
       <TopMenu />
@@ -30,19 +37,25 @@ export default function Home () {
   )
 }
 
-function Button ({ children }) {
+function Button ({ children, to = '/' }) {
   return (
-    <div className='button'>{ children }</div>
+    <Link className='button' to={to}>
+      { children }
+    </Link>
   )
 }
 
 Button.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string
 }
 
 function Navigator ({ children }) {
   return (
-    <div className='navigator'>{ children }</div>
+    <div className='navigator'>
+      <div className='navigator__message'>{ children }</div>
+      <img className='navigator__arrow' src={require('./arrow.png')} />
+    </div>
   )
 }
 
@@ -53,11 +66,7 @@ Navigator.propTypes = {
 function TopMenu ({ selectedMenu }) {
   return (
     <div className='top-menu'>
-      <div className='top-menu__icon'>
-        <div className='top-menu__icon-top'/>
-        <div className='top-menu__icon-middle'/>
-        <div className='top-menu__icon-bottom'/>
-      </div>
+      <img src={require('./menu.png')} className='top-menu__icon' />
       Menu
     </div>
   )
@@ -70,10 +79,10 @@ TopMenu.propTypes = {
 function RightMenu () {
   return (
     <div className='right-menu'>
-      <i className='right-menu-link fa fa-github' aria-hidden="true"></i>
-      <i className='right-menu-link fa fa-linkedin' aria-hidden="true"></i>
-      <i className='right-menu-link fa fa-skype' aria-hidden="true"></i>
-      <i className='right-menu-link fa fa-envelope-o' aria-hidden="true"></i>
+      <i className='right-menu__link fa fa-github' aria-hidden="true"></i>
+      <i className='right-menu__link fa fa-linkedin' aria-hidden="true"></i>
+      <i className='right-menu__link fa fa-skype' aria-hidden="true"></i>
+      <i className='right-menu__link fa fa-envelope-o' aria-hidden="true"></i>
     </div>
   )
 }

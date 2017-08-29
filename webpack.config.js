@@ -24,7 +24,8 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: './build'
+    contentBase: './build',
+    historyApiFallback: true
   },
   plugins: [
     new UglifyJSPlugin(),
