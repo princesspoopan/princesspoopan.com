@@ -11,7 +11,7 @@ export default function CV () {
       <div className='cv__about-me'>
         <BoxContainer height='100%'>
           <div className='cv__about-me-bg'>
-            <img className='cv__image' src={require('./poopan.png')} />
+            <img className='cv__image' src={require('./poopan.jpg')} />
             <div className='cv__header' >
               Miss Krongkarn Jitsil
             </div>
@@ -21,7 +21,7 @@ export default function CV () {
                   icon: 'user',
                   children: (
                     <div className='cv__about-me-description'>
-                      You can call me Poopan. I am full stack Web Engineer currently based in Bangkok.
+                      You can call me Poopan. I am Full Stack Web Engineer currently based in Bangkok.
                       I like to resolve challenging problems, developing rich web experiences & web applications
                     </div>
                   )
@@ -85,7 +85,8 @@ export default function CV () {
                               </span>
                             ),
                             subHeader: 'Nov 2016 — Present',
-                            text: 'Manage Frontend development team, to maintenance ' +
+                            text: 'Manage Frontend development team, using Agile methodology. ' +
+                            'My team responsibilites are maintenance ' +
                             'and improve significant features in Taskworld in both web-based ' +
                             'and mobile application. Also do code review, pair programming and ' +
                             'help new team members to get onboard'
@@ -188,6 +189,7 @@ export default function CV () {
                                 <div className='cv__skill-items'>
                                   HTML / CSS / JavaScript / ReactJS / Redux / PHP / AngularJS
                                   / NodeJS / Express / Karma / Enzyme / Jest / Selenium
+                                  / C#.NET / ASP.NET / WCF
                                 </div>
                               )
                             },
