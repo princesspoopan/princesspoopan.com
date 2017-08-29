@@ -105,7 +105,7 @@ export default function CV () {
                             text: 'Full stack developer, implement and improve significant features, ' +
                             'such as Chat, Kanban board, Project Page to build and release ' +
                             'the real-time project management application called Taskworld using ' +
-                            'ReactJS, Redux, NodeJS and MongoDB'
+                            'ReactJS, Redux, ES2015, Babel, Webpack, NodeJS and MongoDB'
                           },
                           {
                             key: 'sr-software-engineer-at-tr',

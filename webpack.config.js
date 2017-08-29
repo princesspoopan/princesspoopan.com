@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 require('webpack') // to access built-in plugins
 const path = require('path')
 
@@ -23,19 +24,15 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: './build',
-    historyApiFallback: {
-      rewrites: [
-        { from: /favicon.ico/, to: './src/favicon.ico' }
-      ]
-    }
+    contentBase: './build'
   },
   plugins: [
     new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html'
-    })
+    }),
+    new FaviconsWebpackPlugin('./src/favicon.ico')
   ],
   externals: {
     'react/addons': true,
