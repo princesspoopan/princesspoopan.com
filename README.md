@@ -4,12 +4,12 @@
 
   My personal website to store information about me, previous experience and portfolio.
 
-
 ### Technology Stack
 * React
 * Webpack
 * Karma
 * Yarn
+* Service Worker (To make my website work offline :smiley: )
 
 ### How to run the project
 `yarn && yarn run dev`
