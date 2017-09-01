@@ -1,10 +1,41 @@
+@import "../css/colors.styl"
 .menu
   position absolute
   top 60px
   right 132px
+  display flex
+  align-items center
 
   &__icon
     width 28px
     height 18px
     margin-right 12px
-    vertical-align middle
+    position relative
+    top -3px
+    display flex
+    flex-direction column
+    align-items flex-end
+
+  &__icon-top
+    width 20px
+    height 2px
+
+  &__icon-middle
+    width 28px
+    height 2px
+    margin 6px 0px
+
+  &__icon-bottom
+    width 14px
+    height 2px
+
+
+  &__icon-top, &__icon-middle, &__icon-bottom
+    background-color c-black
+    border-radius 2p
+
+  &.--white
+    color c-white
+
+    .menu__icon-top, .menu__icon-middle, .menu__icon-bottom
+      background-color c-white

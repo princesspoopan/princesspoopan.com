@@ -1,10 +1,13 @@
 import './Introduction.styl'
 
+import ClassNames from 'classnames'
+import PropTypes from 'prop-types'
 import React from 'react'
 
-export default function Introduction () {
+export default function Introduction ({ white }) {
+  const className = ClassNames('introduction', { '--white': white })
   return (
-    <div className='introduction'>
+    <div className={className}>
       <div className='introduction__hello'>Hello</div>
       <div className='introduction__intro-myself'>
         {'I\'M'}
@@ -19,4 +22,8 @@ export default function Introduction () {
       </div>
     </div>
   )
+}
+
+Introduction.propTypes = {
+  white: PropTypes.bool
 }

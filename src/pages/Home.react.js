@@ -6,10 +6,8 @@ import Menu from '../components/Menu.react'
 import Navigator from '../components/Navigator.react'
 import React from 'react'
 import RightMenu from '../components/RightMenu.react'
-import propTypes from 'prop-types'
-import { withRouter } from 'react-router-dom'
 
-function Home ({ history }) {
+export default function Home () {
   return (
     <div className='home'>
       <div className='home__bg'>
@@ -21,11 +19,7 @@ function Home ({ history }) {
             <Button to='/cv'>view full cv as pdf</Button>
           </div>
           <div className='home__navigator'>
-            <Navigator
-              onClick={() => {
-                history.push('/aboutme')
-              }}
-            >
+            <Navigator to='/aboutme'>
               About me
             </Navigator>
           </div>
@@ -36,9 +30,3 @@ function Home ({ history }) {
     </div>
   )
 }
-
-Home.propTypes = {
-  history: propTypes.object.isRequired
-}
-
-export default withRouter(Home)
