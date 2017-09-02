@@ -2,9 +2,11 @@ import './WorkExperiences.styl'
 
 import AppLayout from '../components/AppLayout.react'
 import Button from '../components/Button.react'
+import Carousel from '../components/Carousel.react'
 import Menu from '../components/Menu.react'
 import Navigator from '../components/Navigator.react'
 import React from 'react'
+import SlideShow from '../components/SlideShow.react'
 
 export default function WorkExperiences () {
   return (
@@ -14,9 +16,14 @@ export default function WorkExperiences () {
           <div className='work-experiences__header'>
             Work Experiences
           </div>
-          <div className='work-experiences__slides-show'>
-            experiences
-          </div>
+          <SlideShow
+            slides={
+              [
+                <Carousel key='carousel_1' />,
+                <Carousel key='carousel_2' />
+              ]
+            }
+          />
           <div className='work-experiences__cv-button'>
             <Button to='/cv'>view full cv as pdf</Button>
           </div>
