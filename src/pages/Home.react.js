@@ -1,15 +1,15 @@
 import './Home.styl'
 
+import AppLayout from '../components/AppLayout.react'
 import Button from '../components/Button.react'
 import Introduction from '../components/Introduction.react'
 import Menu from '../components/Menu.react'
 import Navigator from '../components/Navigator.react'
 import React from 'react'
-import RightMenu from '../components/RightMenu.react'
 
 export default function Home () {
   return (
-    <div className='home'>
+    <AppLayout firstPage>
       <div className='home__bg'>
         <div className='home__header' />
         <div className='home__body'>
@@ -24,9 +24,10 @@ export default function Home () {
             </Navigator>
           </div>
         </div>
+        <div className='home__menu'>
+          <Menu />
+        </div>
       </div>
-      <Menu />
-      <RightMenu />
-    </div>
+    </AppLayout>
   )
 }

@@ -2,23 +2,16 @@
 .about-me
   position absolute
   top 0
-  right 0
+  right 0px
   bottom 0
   left 0
   overflow hidden
+  background-color c-pink
+  color c-white
+  display flex
 
-  &__left-panel
-    position absolute
-    top 0
-    right 80px
-    bottom 0
-    left 0
-    overflow hidden
-    background-color c-pink
-    color c-white
-
-    > *
-      z-index 2
+  > *
+    z-index 2
 
   &__poopan
     position absolute
@@ -30,21 +23,34 @@
     font-weight bold
     line-height 150px
 
-  &__side-bar
+  &__center
+    margin 120px 200px
+
+  &__detail
+    max-width 640px
+    width 90%
+    margin 24px 26px
+    font-family 'RobotoSlab'
+    font-size 18px
+    line-height 1.5
+
+  &__header
+    font-size 32px
+    opacity 0.64
+
+  &__next-navigator
     position absolute
-    top 0
-    right 0
-    bottom 0
-    width 100px
+    bottom 10px
+    left 212px
+
+  &__menu
+    position absolute
+    top 40px
+    right 40px
 
   &__introduction
     position absolute
-    right -50px
+    right -136px
     top 20%
     color white
     opacity 0.1
-
-  &__prev-navigator
-    position absolute
-    bottom 10px
-    left 26px
