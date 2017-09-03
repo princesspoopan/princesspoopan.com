@@ -4,7 +4,6 @@
   width 90%
   height 82%
   margin 0px 40px
-  border 1px dashed #333
   overflow hidden
   box-sizing border-box
   position relative
@@ -42,6 +41,7 @@
 
   &__item
     position absolute
+    width 100%
 
     &.--slide-in-left
       left 100%
@@ -69,14 +69,14 @@
 
 @keyframes slide-out-left {
   100% {
-    visibility visible
+    visibility hidden
     left -100%
   }
 }
 
 @keyframes slide-out-right {
   100% {
-    visibility visible
+    visibility hidden
     left 100%
   }
 }

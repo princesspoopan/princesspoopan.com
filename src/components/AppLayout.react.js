@@ -16,7 +16,7 @@ export default function AppLayout ({ children, firstPage }) {
         {
           !firstPage && (
             <div className='app-layout__navigator'>
-              <Navigator to='/'>Back to top</Navigator>
+              <Navigator up to='/'>Back to top</Navigator>
             </div>
           )
         }

@@ -8,7 +8,7 @@ import React from 'react'
 export default class SlideShow extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { slide: 1 }
+    this.state = { slide: props.backward ? props.slides.length : 1 }
   }
 
   render () {
@@ -93,5 +93,6 @@ export default class SlideShow extends React.Component {
 }
 
 SlideShow.propTypes = {
-  slides: PropTypes.array.isRequired
+  slides: PropTypes.array.isRequired,
+  backward: PropTypes.bool
 }

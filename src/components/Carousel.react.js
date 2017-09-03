@@ -11,10 +11,7 @@ export default class Carousel extends React.Component {
   }
 
   render () {
-    const items = [
-      'Taskworld',
-      'Thomson Reuters'
-    ]
+    const items = this.props.items
     return (
       <div
         className='carousel'
