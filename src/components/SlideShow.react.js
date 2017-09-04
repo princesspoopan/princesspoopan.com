@@ -63,30 +63,34 @@ export default class SlideShow extends React.Component {
             </div>
           </CSSTransition>
         </div>
-        <div className='slide-show__buttons'>
-          <div
-            className={prevButtonCl}
-            onClick={() => {
-              this.setState({
-                slide: this.state.slide - 1,
-                prevSlide: this.state.slide
-              })
-            }}
-          >
-            &#x2190;
-          </div>
-          <div
-            className={nextButtonCl}
-            onClick={() => {
-              this.setState({
-                slide: this.state.slide + 1,
-                prevSlide: this.state.slide
-              })
-            }}
-          >
-            &#x2192;
-          </div>
-        </div>
+        {
+          this.props.renderButtons([
+            <div
+              key='prevButton'
+              className={prevButtonCl}
+              onClick={() => {
+                this.setState({
+                  slide: this.state.slide - 1,
+                  prevSlide: this.state.slide
+                })
+              }}
+            >
+              &#x2190;
+            </div>,
+            <div
+              key='nextButton'
+              className={nextButtonCl}
+              onClick={() => {
+                this.setState({
+                  slide: this.state.slide + 1,
+                  prevSlide: this.state.slide
+                })
+              }}
+            >
+              &#x2192;
+            </div>
+          ])
+        }
       </div>
     )
   }
@@ -94,5 +98,6 @@ export default class SlideShow extends React.Component {
 
 SlideShow.propTypes = {
   slides: PropTypes.array.isRequired,
-  backward: PropTypes.bool
+  backward: PropTypes.bool,
+  renderButtons: PropTypes.func
 }

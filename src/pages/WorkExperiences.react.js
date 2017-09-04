@@ -107,16 +107,23 @@ export default function WorkExperiences () {
           <div className='work-experiences__header'>
             Work Experiences
           </div>
-          <SlideShow
-            backward
-            slides={[trSlide, twSlide]}
-          />
+          <div className='work-experiences__slide-show'>
+            <SlideShow
+              backward
+              slides={[trSlide, twSlide]}
+              renderButtons={(children) => (
+                <div className='work-experiences__slide-show-buttons'>
+                  { children }
+                </div>
+              )}
+            />
+          </div>
           <div className='work-experiences__cv-button'>
             <Button to='/cv'>view full cv as pdf</Button>
           </div>
         </div>
         <div className='work-experiences__next-navigator'>
-          <Navigator to='/'>Recommendations</Navigator>
+          <Navigator to='/recommendations'>Recommendations</Navigator>
         </div>
         <div className='work-experiences__paper-border' />
         <div className='work-experiences__menu'>
