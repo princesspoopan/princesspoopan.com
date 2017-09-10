@@ -1,0 +1,71 @@
+@import "../css/colors.styl"
+.recommendations
+  position absolute
+  top 20px
+  right 0
+  bottom 20px
+  left 20px
+  overflow hidden
+  background-color c-pink
+  color c-white
+  display flex
+
+  > *
+    z-index 2
+
+  &__header
+    font-size 32px
+    opacity 0.64
+    color c-light-gray
+    position absolute
+    top 120px
+    left 190px
+    z-index 3
+
+  &__next-navigator
+    position absolute
+    bottom 20%
+    left 180px
+
+  &__slide-show
+    width 60%
+    height 57%
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -75%)
+
+  &__quote-bg
+    width 100%
+    height 350px
+    background-color white
+    border-radius 2px
+    box-shadow 0 30px 40px 20px rgba(0, 0, 0, 0.32)
+
+  &__slide-show-buttons
+    position absolute
+    right 6px
+    bottom 11%
+
+  &__menu
+    position absolute
+    top 40px
+    right 40px
+
+  &__top-left-fold
+    position absolute
+    top 0
+    left 0
+    border-right 692px solid transparent
+    border-left 692px solid c-white
+    border-bottom 402px solid transparent
+    z-index 1
+
+  &__bottom-right-fold
+    position absolute
+    bottom 0
+    right 0
+    border-left 723px solid transparent
+    border-right 723px solid c-white
+    border-top 418px solid transparent
+    z-index 1
