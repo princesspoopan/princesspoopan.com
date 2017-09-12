@@ -11,6 +11,8 @@
 * Yarn
 * Service Worker (To make my website work offline :smiley: )
 
+Also after merge or commit to master (and test is green :green_heart:), the production build will be committed to princesspoopan.github.io automatically via __CircleCI__
+
 ### How to run the project
 `yarn && yarn run dev`
 
