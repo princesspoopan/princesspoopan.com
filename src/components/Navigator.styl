@@ -1,0 +1,50 @@
+@import "../css/colors.styl"
+
+.navigator
+  display inline-flex
+  flex-direction column
+  align-items center
+  position relative
+  cursor pointer
+
+  &.--up
+    flex-direction column-reverse
+
+    .navigator__arrow
+      animation bounce-up 1s ease-in-out alternate infinite
+
+  &.--white
+    color
+
+  &__arrow
+    position relative
+    left 2px
+    padding 10px 0px
+    animation bounce-down 1s ease-in-out alternate infinite
+
+
+  &__message
+    font-family 'Montserrat', sans-serif
+    font-size 12px
+    line-height 16px
+    white-space nowrap
+    cursor pointer
+
+    .--space
+      width 3px
+      height 5px
+
+     > div
+      transform rotate(-90deg)
+      height 12px
+
+
+@keyframes bounce-up {
+  0% { transform: translateY(5px) }
+  100% { transform: translateY(-2px) }
+}
+
+@keyframes bounce-down {
+  0% { transform: translateY(2px) }
+  100% { transform: translateY(-5px) }
+}

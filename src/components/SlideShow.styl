@@ -1,0 +1,64 @@
+@import "../css/colors.styl"
+
+.slide-show
+
+  &__button
+    width 60px
+    height 60px
+    display inline-flex
+    align-items center
+    justify-content center
+    border 1px solid c-pink
+    border-radius 50%
+    margin-right 12px
+    opacity 0.24
+    color c-pink
+    pointer-events none
+
+    &.--active
+      opacity 1
+      cursor pointer
+      pointer-events visible
+
+  &__item
+    position absolute
+    width 100%
+    height 100%
+
+    &.--slide-in-left
+      left 100%
+      animation slide-in 0.5s forwards
+
+    &.--slide-in-right
+      left -100%
+      animation slide-in 0.5s forwards
+
+    &.--slide-out-left
+      left 0%
+      animation slide-out-left 0.5s forwards
+
+    &.--slide-out-right
+      left 0%
+      animation slide-out-right 0.5s forwards
+
+
+@keyframes slide-in {
+  100% {
+    visibility visible
+    left 0
+  }
+}
+
+@keyframes slide-out-left {
+  100% {
+    visibility hidden
+    left -100%
+  }
+}
+
+@keyframes slide-out-right {
+  100% {
+    visibility hidden
+    left 100%
+  }
+}

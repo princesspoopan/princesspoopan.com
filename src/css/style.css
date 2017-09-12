@@ -1,4 +1,4 @@
-@import "../external-libs/font-awesome/css/font-awesome.css"
+@import "../external-libs/font-awesome/css/font-awesome.css";
 
 @font-face {
   font-family: 'BebasNeue';
@@ -14,6 +14,10 @@
 
 body {
   font-family: 'BebasNeue';
-  letter-spacing: 2px;
-  margin: 0;
+  margin: 0px
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

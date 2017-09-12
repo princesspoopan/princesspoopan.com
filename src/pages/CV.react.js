@@ -135,11 +135,11 @@ export default function CV () {
                             subHeader: 'May 2011 — Feb 2013',
                             text: (
                               <div>
-                                <div>&#9675; Build CMS for manage web pages in the main application of Thomson Reuters Eikon</div>
+                                <div>&#9675; Implement and maintenance realtime data in Thomson Reuters Eikon using JavaScript.</div>
                                 <div>&nbsp;</div>
-                                <div>&#9675; Implement and maintenance realtime data in Thomson Reuters Eikon Assets using JavaScript</div>
+                                <div>&#9675; Developed the SPA application for realtime Bonds data using NodeJS, jQuery, AngularJS, Backbone.js.</div>
                                 <div>&nbsp;</div>
-                                <div>&#9675; Maintenance main home pages in Thomson Reuters Eikon</div>
+                                <div>&#9675; Implement CMS system to manage web pages which publish directly to Production for using Java, PHP, JavaScript.</div>
                               </div>
                             )
                           },
