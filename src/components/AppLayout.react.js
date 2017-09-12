@@ -8,6 +8,9 @@ import RightMenu from '../components/RightMenu.react'
 export default function AppLayout ({ children, firstPage }) {
   return (
     <div className='app-layout'>
+      <div className='app-layout__flash'>
+        This is still in progress, there is so much more to come...
+      </div>
       <div className='app-layout__body'>
         { children }
       </div>

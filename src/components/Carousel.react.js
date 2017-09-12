@@ -10,16 +10,19 @@ export default class Carousel extends React.Component {
     this.state = { item: 1 }
   }
 
+  componentDidMount () {
+    setInterval(() => this.setState({
+      item: this.state.item < this.props.items.length
+        ? this.state.item + 1 : 1,
+      prevItem: this.state.item
+    }), 3000)
+  }
+
   render () {
     const items = this.props.items
     return (
       <div
         className='carousel'
-        onClick={() => this.setState({
-          item: this.state.item < items.length
-            ? this.state.item + 1 : 1,
-          prevItem: this.state.item
-        })}
       >
         <div className='carousel__stage'>
           {

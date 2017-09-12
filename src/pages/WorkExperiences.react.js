@@ -119,7 +119,11 @@ export default function WorkExperiences () {
             />
           </div>
           <div className='work-experiences__cv-button'>
-            <Button to='/cv'>view full cv as pdf</Button>
+            <Button
+              href='https://www.dropbox.com/s/fz45gyj7k64dmzb/Krongkarn%20Jitsil%20CV.pdf?dl=0'
+            >
+              view full cv as pdf
+            </Button>
           </div>
         </div>
         <div className='work-experiences__next-navigator'>

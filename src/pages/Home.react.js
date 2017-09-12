@@ -15,8 +15,14 @@ export default function Home () {
         <div className='home__body'>
           <Introduction />
           <div className='home__buttons'>
-            <Button>get in touch with me</Button>
-            <Button to='/cv'>view full cv as pdf</Button>
+            <Button to='/cv'>
+              my cv page
+            </Button>
+            <Button
+              href='https://www.dropbox.com/s/fz45gyj7k64dmzb/Krongkarn%20Jitsil%20CV.pdf?dl=0'
+            >
+              view full cv as pdf
+            </Button>
           </div>
           <div className='home__navigator'>
             <Navigator to='/aboutme'>
