@@ -28,11 +28,28 @@ export default function CV () {
                 },
                 {
                   icon: 'phone',
-                  children: '(+66) 99-829-5495'
+                  children: (
+                    <div className='cv__about-me-description'>
+                      (+66) 99-829-5495
+                    </div>
+                  )
+                },
+                {
+                  icon: 'address-book',
+                  children: (
+                    <div className='cv__about-me-description'>
+                      196 Isaraphab 40, Isaraphab Road, Wat-Arun,
+                      Bangkok-Yai, Bangkok 10600 Thailand
+                    </div>
+                  )
                 },
                 {
                   icon: 'envelope',
-                  children: 'krongkarn.jitsil@gmail.com'
+                  children: (
+                    <div className='cv__about-me-description'>
+                      krongkarn.jitsil@gmail.com
+                    </div>
+                  )
                 },
                 {
                   icon: 'graduation-cap',

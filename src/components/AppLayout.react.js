@@ -9,7 +9,7 @@ export default function AppLayout ({ children, firstPage }) {
   return (
     <div className='app-layout'>
       <div className='app-layout__flash'>
-        This is still in progress, there is so much more to come...
+        This is still in progress, there is so much more to come soon...
       </div>
       <div className='app-layout__body'>
         { children }
