@@ -6,7 +6,7 @@ jobs:
      steps:
        - add_ssh_keys:
           fingerprints:
-            - "66:2b:78:fe:40:56:af:39:c1:81:ef:09:7d:ef:68:18"
+            - "fe:09:2a:9f:45:2c:6c:81:13:2b:9e:17:6a:9f:4d:1d"
        - checkout
        - run: npm install yarn && yarn
        - run: yarn run test
