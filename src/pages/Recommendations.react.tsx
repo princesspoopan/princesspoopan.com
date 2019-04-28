@@ -1,12 +1,12 @@
 import './Recommendations.styl'
 
-import AppLayout from '../components/AppLayout.react'
-import Menu from '../components/Menu.react'
-import Navigator from '../components/Navigator.react'
-import React from 'react'
-import SlideShow from '../components/SlideShow.react'
+import { AppLayout } from '../components/AppLayout.react'
+import { Menu } from '../components/Menu.react'
+import { Navigator } from '../components/Navigator.react'
+import * as React from 'react'
+import { SlideShow } from '../components/SlideShow.react'
 
-export default function Recommendations () {
+export const Recommendations = () => {
   return (
     <AppLayout>
       <div className='recommendations'>
@@ -25,7 +25,7 @@ export default function Recommendations () {
               <div key='2'>anais</div>,
               <div key='3'>simon</div>
             ]}
-            renderButtons={(children) => (
+            renderButtons={(children: JSX.Element) => (
               <div className='recommendations__slide-show-buttons'>
                 { children }
               </div>
@@ -42,3 +42,5 @@ export default function Recommendations () {
     </AppLayout>
   )
 }
+
+export default Recommendations

@@ -1,16 +1,18 @@
 import './WorkExperiences.styl'
 
-import AppLayout from '../components/AppLayout.react'
-import Button from '../components/Button.react'
-import Carousel from '../components/Carousel.react'
-import JobPeroid from '../components/JobPeriod.react'
-import Menu from '../components/Menu.react'
-import Navigator from '../components/Navigator.react'
-import React from 'react'
-import SlideShow from '../components/SlideShow.react'
+import { AppLayout } from '../components/AppLayout.react'
+import { Button } from '../components/Button.react'
+import { Carousel } from '../components/Carousel.react'
+import { JobPeroid } from '../components/JobPeriod.react'
+import { Menu } from '../components/Menu.react'
+import { Navigator } from '../components/Navigator.react'
+import { SlideShow } from '../components/SlideShow.react'
+import * as React from 'react'
 
-export default function WorkExperiences () {
-  function renderCourosel (item, index) {
+declare let require: any
+
+export const WorkExperiences = () => {
+  function renderCourosel (item: string, index: number) {
     return (
       <img
         key={`item-${index}`}
@@ -111,7 +113,7 @@ export default function WorkExperiences () {
             <SlideShow
               backward
               slides={[trSlide, twSlide]}
-              renderButtons={(children) => (
+              renderButtons={(children: JSX.Element) => (
                 <div className='work-experiences__slide-show-buttons'>
                   { children }
                 </div>
@@ -137,3 +139,5 @@ export default function WorkExperiences () {
     </AppLayout>
   )
 }
+
+export default WorkExperiences

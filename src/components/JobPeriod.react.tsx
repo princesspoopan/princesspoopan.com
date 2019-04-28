@@ -1,9 +1,14 @@
 import './JobPeriod.styl'
+import * as React from 'react'
 
-import PropTypes from 'prop-types'
-import React from 'react'
+interface Props {
+  company: string,
+  period: string,
+  title: string,
+  detail: string
+}
 
-export default function JobPeroid ({ company, period, title, detail }) {
+export const JobPeroid = ({ company, period, title, detail }: Props) => {
   return (
     <div className='job-period'>
       <div className='job-period__first-line'>
@@ -21,9 +26,3 @@ export default function JobPeroid ({ company, period, title, detail }) {
   )
 }
 
-JobPeroid.propTypes = {
-  company: PropTypes.string.isRequired,
-  period: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  detail: PropTypes.string.isRequired
-}

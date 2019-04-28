@@ -1,12 +1,12 @@
 import './AboutMe.styl'
 
-import AppLayout from '../components/AppLayout.react'
-import Introduction from '../components/Introduction.react'
-import Menu from '../components/Menu.react'
-import Navigator from '../components/Navigator.react'
-import React from 'react'
+import { AppLayout } from '../components/AppLayout.react'
+import { Introduction } from '../components/Introduction.react'
+import { Menu } from '../components/Menu.react'
+import { Navigator} from '../components/Navigator.react'
+import * as React from 'react'
 
-export default function AboutMe () {
+export const AboutMe = () => {
   return (
     <AppLayout>
       <div className='about-me'>
@@ -41,3 +41,5 @@ export default function AboutMe () {
     </AppLayout>
   )
 }
+
+export default AboutMe

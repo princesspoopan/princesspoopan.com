@@ -1,17 +1,29 @@
 import './SlideShow.styl'
 
-import CSSTransition from 'react-transition-group/CSSTransition'
+import { CSSTransition } from 'react-transition-group'
 import ClassNames from 'classnames'
-import PropTypes from 'prop-types'
-import React from 'react'
+import * as React from 'react'
 
-export default class SlideShow extends React.Component {
-  constructor (props) {
+interface Props {
+  slides: JSX.Element[],
+  backward?: boolean,
+  renderButtons?: any
+}
+
+interface States {
+  slide?: number,
+  prevSlide?: number
+}
+
+export class SlideShow extends React.Component<Props, States> {
+  public state: States
+  public props: Props
+  constructor (props: Props) {
     super(props)
     this.state = { slide: props.backward ? props.slides.length : 1 }
   }
 
-  render () {
+  public render () {
     const slides = this.props.slides
     const prevButtonCl = ClassNames('slide-show__button', {
       '--active': this.state.slide > 1
@@ -29,7 +41,7 @@ export default class SlideShow extends React.Component {
                 in
                 appear
                 timeout={500}
-                classNames="slide"
+                classNames='slide'
               >
                 <div
                   className={`slide-show__item ${
@@ -48,7 +60,7 @@ export default class SlideShow extends React.Component {
             in
             appear
             timeout={500}
-            classNames="slide"
+            classNames='slide'
           >
             <div
               className={`slide-show__item ${
@@ -94,10 +106,4 @@ export default class SlideShow extends React.Component {
       </div>
     )
   }
-}
-
-SlideShow.propTypes = {
-  slides: PropTypes.array.isRequired,
-  backward: PropTypes.bool,
-  renderButtons: PropTypes.func
 }

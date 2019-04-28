@@ -1,14 +1,18 @@
 import './LevelPoints.styl'
 
-import React from 'react'
-import _ from 'lodash'
-import propTypes from 'prop-types'
+import * as React from 'react'
+import { range } from 'lodash'
 
-export default function LevelPoints ({ level, max }) {
+interface Props {
+  level: number,
+  max: number
+}
+
+export const LevelPoints = ({ level, max }: Props) => {
   return (
     <div className='level-points'>
       {
-        _.range(max).map((index) => (
+        range(max).map((index) => (
           <i
             key={`level-point-${index}`}
             className={`level-points__point
@@ -21,9 +25,4 @@ export default function LevelPoints ({ level, max }) {
       }
     </div>
   )
-}
-
-LevelPoints.propTypes = {
-  level: propTypes.number.isRequired,
-  max: propTypes.number.isRequired
 }

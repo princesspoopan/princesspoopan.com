@@ -1,13 +1,13 @@
 import './Home.styl'
 
-import AppLayout from '../components/AppLayout.react'
-import Button from '../components/Button.react'
-import Introduction from '../components/Introduction.react'
-import Menu from '../components/Menu.react'
-import Navigator from '../components/Navigator.react'
-import React from 'react'
+import { AppLayout } from '../components/AppLayout.react'
+import { Button } from '../components/Button.react'
+import { Introduction } from '../components/Introduction.react'
+import { Menu } from '../components/Menu.react'
+import { Navigator } from '../components/Navigator.react'
+import * as React from 'react'
 
-export default function Home () {
+export const Home = () => {
   return (
     <AppLayout firstPage>
       <div className='home__bg'>
@@ -16,12 +16,12 @@ export default function Home () {
           <Introduction />
           <div className='home__buttons'>
             <Button to='/cv'>
-              my cv page
+              <span>my cv page</span>
             </Button>
             <Button
               href='https://www.dropbox.com/s/fz45gyj7k64dmzb/Krongkarn%20Jitsil%20CV.pdf?dl=0'
             >
-              view full cv as pdf
+              <span>view full cv as pdf</span>
             </Button>
           </div>
           <div className='home__navigator'>
@@ -37,3 +37,5 @@ export default function Home () {
     </AppLayout>
   )
 }
+
+export default Home

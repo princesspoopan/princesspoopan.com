@@ -1,9 +1,17 @@
 import './PeriodList.styl'
 
-import React from 'react'
-import propTypes from 'prop-types'
+import * as React from 'react'
 
-export default function PeriodList ({ items }) {
+interface Props {
+  items: Array<{
+    key: string,
+    header: JSX.Element | string,
+    subHeader?: JSX.Element | string,
+    text?: JSX.Element | string
+  }>
+}
+
+export const PeriodList = ({ items }: Props) => {
   return (
     <div className='period-list'>
       {
@@ -13,15 +21,15 @@ export default function PeriodList ({ items }) {
             className='period-list__item'
           >
             <div className='period-list__item-header'>
-              { item.header }
+              {item.header}
             </div>
             <div className='period-list__item-sub-header'>
-              { item.subHeader }
+              {item.subHeader}
             </div>
             {
               item.text && (
                 <div className='period-list__item-additional-text'>
-                  { item.text }
+                  {item.text}
                 </div>
               )
             }
@@ -30,8 +38,4 @@ export default function PeriodList ({ items }) {
       }
     </div>
   )
-}
-
-PeriodList.propTypes = {
-  items: propTypes.array
 }

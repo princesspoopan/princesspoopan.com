@@ -10,7 +10,7 @@ self.addEventListener('install', function (event) {
     caches.open('princesspoopan.com').then(function (cache) {
       return cache.addAll([
         'index.html',
-        '/js/bundle.js',
+        'bundle.js',
         'https://fonts.googleapis.com/css?family=Great+Vibes',
         'https://fonts.gstatic.com/s/greatvibes/v4/6q1c0ofG6NKsEhAc2eh-3Ygp9Q8gbYrhqGlRav_IXfk.woff2'
       ])

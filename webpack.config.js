@@ -1,45 +1,72 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-require('webpack') // to access built-in plugins
-const path = require('path')
+const webpack = require('webpack');
 
-const config = {
-  entry: {
-    'app': [
-      'react-hot-loader/patch',
-      './src/App.react.js'
-    ]
-  },
+module.exports = {
+  entry: './src/App.react.tsx',
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'js/bundle.js?' + (new Date()).getTime()
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, 'build')
   },
-  module: {
-    rules: [
-      { test: /\.js$/, use: 'babel-loader', exclude: '/node_modules/' },
-      { test: /\.(css|styl)$/, use: [ 'style-loader', 'css-loader', 'stylus-loader' ] },
-      { test: /\.(png|svg|jpg|gif|jpeg)$/, use: [ 'file-loader' ] },
-      { test: /\.(woff|woff2|eot|ttf|otf)$/, use: [ 'file-loader' ] }
-    ]
-  },
-  devServer: {
-    contentBase: './build',
-    historyApiFallback: true
-  },
+
   plugins: [
-    new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html'
+      template: './src/index.html'
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new FaviconsWebpackPlugin('./src/favicon.ico')
   ],
-  externals: {
-    'react/addons': true,
-    'react/lib/ExecutionEnvironment': true,
-    'react/lib/ReactContext': true
-  }
-}
 
-module.exports = config
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
+  },
+
+  resolve: {
+      extensions: [".ts", ".tsx", ".js", ".json"]
+  },
+
+  module: {
+      rules: [
+          // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+          { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+
+          // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+          { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+
+          {
+            test: /\.(css|styl)$/,
+            use: ['style-loader', 'css-loader', 'stylus-loader']
+          },
+          {
+            test: /\.(png|svg|jpg|gif|jpeg)$/,
+            use: ['file-loader']
+          },
+          {
+            test: /\.(woff|woff2|eot|ttf|otf)$/,
+            use: ['file-loader']
+          }
+      ]
+      
+  },
+};

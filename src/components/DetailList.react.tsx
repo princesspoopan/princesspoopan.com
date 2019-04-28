@@ -1,9 +1,12 @@
 import './DetailList.styl'
+import * as React from 'react'
 
-import React from 'react'
-import propTypes from 'prop-types'
 
-export default function DetailList ({ items }) {
+interface Props {
+  items: Array<{icon: string, children: JSX.Element | string}>
+}
+
+export const DetailList = ({ items }: Props) => {
   return (
     <div className='detail-list'>
       {
@@ -18,8 +21,4 @@ export default function DetailList ({ items }) {
       }
     </div>
   )
-}
-
-DetailList.propTypes = {
-  items: propTypes.array
 }

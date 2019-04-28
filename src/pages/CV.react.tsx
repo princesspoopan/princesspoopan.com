@@ -1,11 +1,13 @@
 import './CV.styl'
 
-import BoxContainer from '../components/BoxContainer.react'
-import DetailList from '../components/DetailList.react'
-import PeriodList from '../components/PeriodList.react'
-import React from 'react'
+import { BoxContainer } from '../components/BoxContainer.react'
+import { DetailList } from '../components/DetailList.react'
+import { PeriodList } from '../components/PeriodList.react'
+import * as React from 'react'
 
-export default function CV () {
+declare let require: any
+
+export const CV = () => {
   return (
     <div className='cv'>
       <div className='cv__about-me'>
@@ -234,3 +236,5 @@ export default function CV () {
     </div>
   )
 }
+
+export default CV
