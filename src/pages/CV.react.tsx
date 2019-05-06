@@ -101,7 +101,7 @@ export const CV = () => {
                                 </span>
                               </span>
                             ),
-                            subHeader: 'Nov 2016 — Sep 2018',
+                            subHeader: 'Nov 2016 — Sep 2017',
                             text: 'Manage Frontend development team, using Agile methodology. ' +
                             'My team responsibilites are maintenance ' +
                             'and improve significant features in Taskworld in both web-based ' +
