@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config=webpack.production.config.js",
-    "dev": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --config=webpack.development.config.js --hotOnly --open",
     "test": "echo refactoring to jest",
     "test:watch": "echo refactoring to jest",
     "lint": "tslint --config tslint.json --project tsconfig.json"

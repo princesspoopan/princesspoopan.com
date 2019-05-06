@@ -19,7 +19,7 @@ export const Home = () => {
               <span>my cv page</span>
             </Button>
             <Button
-              href='https://www.dropbox.com/s/fz45gyj7k64dmzb/Krongkarn%20Jitsil%20CV.pdf?dl=0'
+              href='https://www.dropbox.com/s/ld1ynbnqm24uy4q/JITSIL%20Krongkarn%20CV%202019.pdf?dl=0'
             >
               <span>view full cv as pdf</span>
             </Button>

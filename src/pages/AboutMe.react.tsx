@@ -18,9 +18,9 @@ export const AboutMe = () => {
             About Me
           </div>
           <div className='about-me__detail'>
-            I am Krongkran Jitsil, a Front-end Web Engineer based in Bangkok.
-             You can call me Poopan. I’m a weird girl who likes making weird things
-             with web technologies. I like to resolve challenging problems and
+             I am Krongkran Jitsil, a Full stack Web Engineer based in Paris.
+             You can call me Poopan. I’m a weird girl who likes creating weird things
+             in software development world. I like to resolve challenging problems and
              imagine useful animations, developing rich web experiences & web applications.
             <br/>
             <br/>

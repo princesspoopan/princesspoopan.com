@@ -23,18 +23,18 @@ export const CV = () => {
                   icon: 'user',
                   children: (
                     <div className='cv__about-me-description'>
-                      You can call me Poopan. I am Full Stack Web Engineer currently based in Bangkok.
+                      You can call me Poopan. I am Senior Software Engineer based in Paris, France.
                       I like to resolve challenging problems, developing rich web experiences & web applications
                     </div>
                   )
                 },
                 {
                   icon: 'phone',
-                  children: '(+66) 99-829-5495'
+                  children: <div className='cv__about-me-description --emphasize'>(+33) 07 61 21 68 82</div>
                 },
                 {
                   icon: 'envelope',
-                  children: 'krongkarn.jitsil@gmail.com'
+                  children: <div className='cv__about-me-description --emphasize'>krongkarn.jitsil@gmail.com</div>
                 },
                 {
                   icon: 'graduation-cap',
@@ -72,10 +72,25 @@ export const CV = () => {
                   children: (
                     <div className='cv__work-experiences-text'>
                       <div className='cv__work-experiences-header'>
-                        Work Experience
+                        Work Experiences
                       </div>
                       <PeriodList
                         items={[
+                          {
+                            key: 'sr-software-engineer-at-cs',
+                            header: (
+                              <span className='cv__work-experiences-title'>
+                                Senior Software Engineer
+                                <span className='cv__work-experiences-company'>
+                                  @ContentSquare Paris, France
+                                </span>
+                              </span>
+                            ),
+                            subHeader: 'Nov 2017 - Present',
+                            text: 'Senior software engineer in R&D Application team, lead the projects,' +
+                            ' create implementation plan, design the architecture and the solution for the project.' +
+                            ' Mentoring the junior developers and onboarding the new joiners.'
+                          },
                           {
                             key: 'team-lead-at-taskworld',
                             header: (
@@ -86,7 +101,7 @@ export const CV = () => {
                                 </span>
                               </span>
                             ),
-                            subHeader: 'Nov 2016 — Present',
+                            subHeader: 'Nov 2016 — Sep 2018',
                             text: 'Manage Frontend development team, using Agile methodology. ' +
                             'My team responsibilites are maintenance ' +
                             'and improve significant features in Taskworld in both web-based ' +
@@ -189,9 +204,9 @@ export const CV = () => {
                               header: 'Programming languages/Library',
                               text: (
                                 <div className='cv__skill-items'>
-                                  HTML / CSS / JavaScript / ReactJS / Redux / PHP / AngularJS
-                                  / NodeJS / Express / Karma / Enzyme / Jest / Selenium
-                                  / C#.NET / ASP.NET / WCF
+                                  HTML / CSS / JavaScript / ReactJS / Redux / Angular / AngularJS
+                                  / NodeJS / NestJS / Express / Karma / Jasmine / Enzyme / Jest / Selenium
+                                  / Robot Framework / Cypress
                                 </div>
                               )
                             },
@@ -209,7 +224,7 @@ export const CV = () => {
                               header: 'Building Tools/Automate Tools',
                               text: (
                                 <div className='cv__skill-items'>
-                                  Webpack / CircleCI
+                                  Webpack / Lerna / CircleCI / Jenkins
                                 </div>
                               )
                             },
@@ -218,7 +233,7 @@ export const CV = () => {
                               header: 'Database',
                               text: (
                                 <div className='cv__skill-items'>
-                                  MongoDB / Firebase DB / MySQL
+                                  MongoDB / Firebase DB / MySQL / Postgresql
                                 </div>
                               )
                             }
