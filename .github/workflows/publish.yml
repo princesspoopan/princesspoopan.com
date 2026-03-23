@@ -1,4 +1,4 @@
-name: Deploy
+name: Publish
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,7 +22,21 @@ jobs:
 
       - run: npm run build
 
-      - name: Deploy to princesspoopan.github.io
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to princesspoopan.github.io
         env:
           GH_EMAIL: ${{ secrets.GH_EMAIL }}
           GH_NAME: ${{ secrets.GH_NAME }}
