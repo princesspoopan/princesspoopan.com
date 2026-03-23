@@ -19,10 +19,10 @@ export const AboutMe = () => {
           <div className='about-me__detail'>
              I am Krongkran Jitsil, a Full stack Software Engineer based in Lyon.
              You can call me Poopan. I fall in love with solving problems, developing the software,
-              everything around it, including myself everyday.
+              everything around it.
             <br/>
             <br/>
-             When not working or futzing around with code, I enjoy time with garden, my cats and relaxing days with podcast and Netflix.
+             When not working or fuzzing around with code, I enjoy time in the garden with my cats and having a relaxing day with podcast and Netflix.
           </div>
           <div className='about-me__next-navigator'>
             <Navigator to='/workexperiences' white >Work experiences</Navigator>

@@ -18,7 +18,7 @@ export const Home = () => {
               <span>my cv page</span>
             </Button>
             <Button
-              href='https://www.dropbox.com/s/ld1ynbnqm24uy4q/JITSIL%20Krongkarn%20CV%202019.pdf?dl=0'
+              href='https://www.dropbox.com/scl/fi/1g4ieopdmfcxey97l7vqb/Krongkarn-JITSIL-CV-2026.pdf?rlkey=abys80myxdmmy6pgpiagb1zbu&st=rjnbauus&dl=0'
             >
               <span>view full cv as pdf</span>
             </Button>

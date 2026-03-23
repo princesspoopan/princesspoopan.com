@@ -9,68 +9,127 @@ export const CV = () => {
   return (
     <div className='cv'>
       <div className='cv__about-me'>
-        <BoxContainer height='100%'>
-          <div className='cv__about-me-bg'>
+        <BoxContainer>
+          <div className='cv__about-me-content'>
             <img className='cv__image' src={poopanImg} />
-            <div className='cv__header' >
-              Krongkarn Jitsil
+            <div className='cv__about-me-details'>
+              <div className='cv__header'>
+                Krongkarn Jitsil
+              </div>
+              <DetailList
+                items={[
+                  {
+                    icon: 'user',
+                    children: (
+                      <div className='cv__about-me-description'>
+                          Staff Software Engineer based in Lyon, France, specializing in full-stack development across frontend, backend, data engineering, and DevOps.
+                          I design and build scalable systems, tackle complex technical challenges, and drive engineering excellence.
+                          Solving problems by finding the most efficient solutions is my passion, which motivates me to keep learning and improving every day.
+                          I actively leverage AI tools to enhance productivity, streamline development workflows, and deliver high-impact yet simple and cost efficient solutions.
+                      </div>
+                    )
+                  },
+                  {
+                    icon: 'phone',
+                    children: <div className='cv__about-me-description --emphasize'>(+33) 07 61 21 68 82</div>
+                  },
+                  {
+                    icon: 'envelope',
+                    children: <div className='cv__about-me-description --emphasize'>krongkarn.jitsil@gmail.com</div>
+                  },
+                  {
+                    icon: 'link',
+                    children: <div className='cv__about-me-description --emphasize'>https://princesspoopan.github.io/</div>
+                  },
+                  {
+                    icon: 'graduation-cap',
+                    children: <PeriodList
+                      items={[
+                        {
+                          key: 'university',
+                          header: 'Bachelor degree of Computer Sciences',
+                          subHeader: 'Kasetsart University (MAY 2005 - APR 2009)',
+                          text: 'Part of web researcher team in Senior years and ' +
+                          'received the scholarship award by represented ' +
+                          'the navigation guide system ' +
+                          'for Thailand National Museum'
+                        },
+                        {
+                          key: 'school',
+                          header: 'Math & Sciences Major',
+                          subHeader: 'Satriwithaya School (APR 1999 - MAR 2005)'
+                        }
+                      ]}
+                    />
+                  }
+                ]}
+              />
             </div>
-            <DetailList
-              items={[
-                {
-                  icon: 'user',
-                  children: (
-                    <div className='cv__about-me-description'>
-                        Staff Software Engineer based in Lyon, France, specializing in full-stack development across frontend, backend, data engineering, and DevOps.
-                        I design and build scalable systems, tackle complex technical challenges, and drive engineering excellence.
-                        Solving problems by finding the most efficient solutions is my passion, which motivates me to keep learning and improving every day.
-                        I actively leverage AI tools to enhance productivity, streamline development workflows, and deliver high-impact yet simple and cost efficient solutions.
-                    </div>
-                  )
-                },
-                {
-                  icon: 'phone',
-                  children: <div className='cv__about-me-description --emphasize'>(+33) 07 61 21 68 82</div>
-                },
-                {
-                  icon: 'envelope',
-                  children: <div className='cv__about-me-description --emphasize'>krongkarn.jitsil@gmail.com</div>
-                },
-                {
-                  icon: 'graduation-cap',
-                  children: <PeriodList
-                    items={[
-                      {
-                        key: 'university',
-                        header: 'Bachelor degree of Computer Sciences',
-                        subHeader: 'Kasetsart University (MAY 2005 - APR 2009)',
-                        text: 'Part of web researcher team in Senior years and ' +
-                        'received the scholarship award by represented ' +
-                        'the navigation guide system ' +
-                        'for Thailand National Museum'
-                      },
-                      {
-                        key: 'school',
-                        header: 'Math & Sciences Major',
-                        subHeader: 'Satriwithaya School (APR 1999 - MAR 2005)'
-                      }
-                    ]}
-                  />
-                }
-              ]}
-            />
           </div>
         </BoxContainer>
       </div>
-      <div className='cv__main'>
-        <BoxContainer>
-          <div className='cv__work-experiences'>
-            <DetailList
-              items={[
-                {
-                  icon: 'briefcase',
-                  children: (
-                    <div className='cv__work-experiences-text'>
+      <div className='cv__block-spacing'></div>
+      <BoxContainer>
+        <div className='cv__skills'>
+          <DetailList
+            items={[
+              {
+                icon: 'code',
+                children: (
+                  <div className='cv__skills-text'>
+                    <div className='cv__skills-header'>
+                      Professional Skills
+                    </div>
+                    <div className='cv__skill-list'>
+                      <PeriodList
+                        items={[
+                          {
+                            key: 'programming-language-library',
+                            header: 'Languages / Frameworks',
+                            text: (
+                              <div className='cv__skill-items'>
+                                  TypeScript, JavaScript, Java, Scala, Go, HTML, CSS, React, Redux, VueJS, Angular, AngularJS,
+                                  Node.js, NestJS, GraphQL, TypeORM, Jest, Karma, Jasmine, Enzyme, Selenium, Cypress, Robot Framework
+                              </div>
+                            )
+                          },
+                          {
+                            key: 'data-streaming',
+                            header: 'Data & Streaming and cloud',
+                            text: (
+                              <div className='cv__skill-items'>
+                                  Kafka, Flink, ClickHouse, SingleStore, Redis, PostgreSQL, MySQL, MongoDB, AWS (S3), Azure (Blob Storage)
+                              </div>
+                            )
+                          },
+                          {
+                            key: 'infra-devops',
+                            header: 'Infrastructure / DevOps',
+                            text: (
+                              <div className='cv__skill-items'>
+                                  Kubernetes, GitHub Actions, Jenkins, Terraform, Helmfile
+                              </div>
+                            )
+                          }
+                        ]}
+                      />
+                    </div>
+                  </div>
+                )
+              }
+            ]}
+          />
+        </div>
+      </BoxContainer>
+      <div className='cv__block-spacing'></div>
+      <BoxContainer>
+        <div className='cv__work-experiences'>
+          <DetailList
+            items={[
+              {
+                icon: 'briefcase',
+                children: (
+                  <div className='cv__work-experiences-text'>
                       <div className='cv__work-experiences-header'>
                         Work Experiences
                       </div>
@@ -155,30 +214,17 @@ export const CV = () => {
                             key: 'team-lead-at-taskworld',
                             header: (
                               <span className='cv__work-experiences-title'>
-                                Web Engineer Team Lead
+                                Web Engineer - Web Engineer Team Lead
                                 <span className='cv__work-experiences-company'>
                                   @Taskworld co., ltd
                                 </span>
                               </span>
                             ),
-                            subHeader: 'Nov 2016 — Sep 2017',
-                            text: 'Led the frontend engineering team using Agile methodologies, overseeing both project delivery and team development.' +
+                            subHeader: 'Nov 2015 — Sep 2017',
+                            text: 'Full-stack developer responsible for implementing and improving key features such as Chat, Kanban board, and Project Page. using React, Redux, ES2015, Babel, Webpack, Node.js, and MongoDB.' +
+                                'Led the frontend engineering team using Agile methodologies, overseeing both project delivery and team development.' +
                             'Responsible for maintaining and enhancing key features of Taskworld application across web and mobile applications. ' +
                             'Conducted code reviews, facilitated pair programming, onboarded and mentored new team members and help with their continuous growth.'
-                          },
-                          {
-                            key: 'web-engineer-at-taskworld',
-                            header: (
-                              <span className='cv__work-experiences-title'>
-                                Web Engineer
-                                <span className='cv__work-experiences-company'>
-                                  @Taskworld co., ltd
-                                </span>
-                              </span>
-                            ),
-                            subHeader: 'Nov 2015 — Oct 2016',
-                            text: 'Full-stack developer responsible for implementing and improving key features such as Chat, Kanban board, and Project Page. ' +
-                            'Contributed to building and delivering a real-time project management application (Taskworld) using React, Redux, ES2015, Babel, Webpack, Node.js, and MongoDB.'
                           },
                           {
                             key: 'senior-software-engineer-at-tr',
@@ -203,60 +249,6 @@ export const CV = () => {
             />
           </div>
         </BoxContainer>
-        <div className='cv__main-block-spacing'></div>
-        <BoxContainer>
-          <div className='cv__skills'>
-            <DetailList
-              items={[
-                {
-                  icon: 'code',
-                  children: (
-                    <div className='cv__skills-text'>
-                      <div className='cv__skills-header'>
-                        Professional Skills
-                      </div>
-                      <div className='cv__skill-list'>
-                        <PeriodList
-                          items={[
-                            {
-                              key: 'programming-language-library',
-                              header: 'Languages / Frameworks',
-                              text: (
-                                <div className='cv__skill-items'>
-                                    TypeScript, JavaScript, Java, Scala, Go, HTML, CSS, React, Redux, VueJS, Angular, AngularJS,
-                                    Node.js, NestJS, GraphQL, TypeORM, Jest, Karma, Jasmine, Enzyme, Selenium, Cypress, Robot Framework
-                                </div>
-                              )
-                            },
-                            {
-                              key: 'data-streaming',
-                              header: 'Data & Streaming and cloud',
-                              text: (
-                                <div className='cv__skill-items'>
-                                    Kafka, Flink, ClickHouse, SingleStore, Redis, PostgreSQL, MySQL, MongoDB, AWS (S3), Azure (Blob Storage)
-                                </div>
-                              )
-                            },
-                            {
-                              key: 'infra-devops',
-                              header: 'Infrastructure / DevOps',
-                              text: (
-                                <div className='cv__skill-items'>
-                                    Kubernetes, GitHub Actions, Jenkins, Terraform, Helmfile
-                                </div>
-                              )
-                            }
-                          ]}
-                        />
-                      </div>
-                    </div>
-                  )
-                }
-              ]}
-            />
-          </div>
-        </BoxContainer>
-      </div>
     </div>
   )
 }
