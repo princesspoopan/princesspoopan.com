@@ -7,9 +7,15 @@ import { JobPeroid } from '../components/JobPeriod.react'
 import { Menu } from '../components/Menu.react'
 import { Navigator } from '../components/Navigator.react'
 import { SlideShow } from '../components/SlideShow.react'
-import * as React from 'react'
-
-declare let require: any
+import React from 'react'
+import twProjectKanban from '../slide-images/tw-project-kanban.png'
+import twChatPage from '../slide-images/tw-chat-page.png'
+import twPeoplePage from '../slide-images/tw-people-page.png'
+import twAnalyticCharts from '../slide-images/tw-analytic-charts.png'
+import treWhatsNew from '../slide-images/tre-whats-new.png'
+import treWhatsNewAdmin from '../slide-images/tre-whats-new-admin.png'
+import treHomepage from '../slide-images/tre-homepage.png'
+import treCountries from '../slide-images/tre-countries.png'
 
 export const WorkExperiences = () => {
   function renderCourosel (item: string, index: number) {
@@ -22,17 +28,17 @@ export const WorkExperiences = () => {
     )
   }
   const twCourosel = [
-    require('../slide-images/tw-project-kanban.png'),
-    require('../slide-images/tw-chat-page.png'),
-    require('../slide-images/tw-people-page.png'),
-    require('../slide-images/tw-analytic-charts.png')
+    twProjectKanban,
+    twChatPage,
+    twPeoplePage,
+    twAnalyticCharts
   ].map(renderCourosel)
 
   const trCourosel = [
-    require('../slide-images/tre-whats-new.png'),
-    require('../slide-images/tre-whats-new-admin.png'),
-    require('../slide-images/tre-homepage.png'),
-    require('../slide-images/tre-countries.png')
+    treWhatsNew,
+    treWhatsNewAdmin,
+    treHomepage,
+    treCountries
   ].map(renderCourosel)
 
   const twSlide = (
@@ -113,7 +119,7 @@ export const WorkExperiences = () => {
             <SlideShow
               backward
               slides={[trSlide, twSlide]}
-              renderButtons={(children: JSX.Element) => (
+              renderButtons={(children: React.ReactElement[]) => (
                 <div className='work-experiences__slide-show-buttons'>
                   { children }
                 </div>

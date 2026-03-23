@@ -3,7 +3,7 @@ import './Recommendations.styl'
 import { AppLayout } from '../components/AppLayout.react'
 import { Menu } from '../components/Menu.react'
 import { Navigator } from '../components/Navigator.react'
-import * as React from 'react'
+import React from 'react'
 import { SlideShow } from '../components/SlideShow.react'
 
 export const Recommendations = () => {
@@ -25,7 +25,7 @@ export const Recommendations = () => {
               <div key='2'>anais</div>,
               <div key='3'>simon</div>
             ]}
-            renderButtons={(children: JSX.Element) => (
+            renderButtons={(children: React.ReactElement[]) => (
               <div className='recommendations__slide-show-buttons'>
                 { children }
               </div>

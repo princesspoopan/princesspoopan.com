@@ -1,13 +1,13 @@
 import './PeriodList.styl'
 
-import * as React from 'react'
+ import React from 'react'
 
 interface Props {
   items: Array<{
     key: string,
-    header: JSX.Element | string,
-    subHeader?: JSX.Element | string,
-    text?: JSX.Element | string
+    header: React.ReactNode,
+    subHeader?: React.ReactNode,
+    text?: React.ReactNode
   }>
 }
 

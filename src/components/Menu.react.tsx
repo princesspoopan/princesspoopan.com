@@ -1,7 +1,7 @@
 import './Menu.styl'
 
 import ClassNames from 'classnames'
-import * as React from 'react'
+import React from 'react'
 
 interface Props {
   selectedMenu?: string,

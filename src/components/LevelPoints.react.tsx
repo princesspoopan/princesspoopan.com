@@ -1,6 +1,5 @@
 import './LevelPoints.styl'
 
-import * as React from 'react'
 import { range } from 'lodash'
 
 interface Props {

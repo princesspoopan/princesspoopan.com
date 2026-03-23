@@ -1,5 +1,4 @@
 import './JobPeriod.styl'
-import * as React from 'react'
 
 interface Props {
   company: string,

@@ -1,9 +1,9 @@
 import './BoxContainer.styl'
 
-import * as React from 'react'
+import React from 'react'
 
 interface Props {
-  children: JSX.Element,
+  children: React.ReactNode,
   width?: string,
   height?: string
 }

@@ -1,14 +1,14 @@
 import './Carousel.styl'
 
 import { CSSTransition } from 'react-transition-group'
-import * as React from 'react'
+import React from 'react'
 
 interface Props {
-  items: JSX.Element[]
+  items: React.ReactElement[]
 }
 
 interface States {
-  item?: number,
+  item: number,
   prevItem?: number
 }
 

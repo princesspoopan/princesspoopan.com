@@ -3,9 +3,7 @@ import './CV.styl'
 import { BoxContainer } from '../components/BoxContainer.react'
 import { DetailList } from '../components/DetailList.react'
 import { PeriodList } from '../components/PeriodList.react'
-import * as React from 'react'
-
-declare let require: any
+import poopanImg from './poopan.jpg'
 
 export const CV = () => {
   return (
@@ -13,7 +11,7 @@ export const CV = () => {
       <div className='cv__about-me'>
         <BoxContainer height='100%'>
           <div className='cv__about-me-bg'>
-            <img className='cv__image' src={require('./poopan.jpg')} />
+            <img className='cv__image' src={poopanImg} />
             <div className='cv__header' >
               Miss Krongkarn Jitsil
             </div>

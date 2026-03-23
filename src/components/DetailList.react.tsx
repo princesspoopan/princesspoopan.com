@@ -1,9 +1,9 @@
 import './DetailList.styl'
-import * as React from 'react'
+import React from 'react'
 
 
 interface Props {
-  items: Array<{icon: string, children: JSX.Element | string}>
+  items: Array<{icon: string, children: React.ReactNode}>
 }
 
 export const DetailList = ({ items }: Props) => {

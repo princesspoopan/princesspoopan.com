@@ -1,7 +1,5 @@
 import './RightMenu.styl'
 
-import * as React from 'react'
-
 export function RightMenu () {
   return (
     <div className='right-menu'>

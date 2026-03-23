@@ -2,22 +2,20 @@ import './SlideShow.styl'
 
 import { CSSTransition } from 'react-transition-group'
 import ClassNames from 'classnames'
-import * as React from 'react'
+import React from 'react'
 
 interface Props {
-  slides: JSX.Element[],
+  slides: React.ReactElement[],
   backward?: boolean,
-  renderButtons?: any
+  renderButtons?: (buttons: React.ReactElement[]) => React.ReactNode
 }
 
 interface States {
-  slide?: number,
+  slide: number,
   prevSlide?: number
 }
 
 export class SlideShow extends React.Component<Props, States> {
-  public state: States
-  public props: Props
   constructor (props: Props) {
     super(props)
     this.state = { slide: props.backward ? props.slides.length : 1 }
@@ -76,7 +74,7 @@ export class SlideShow extends React.Component<Props, States> {
           </CSSTransition>
         </div>
         {
-          this.props.renderButtons([
+          this.props.renderButtons?.([
             <div
               key='prevButton'
               className={prevButtonCl}

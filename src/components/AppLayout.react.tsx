@@ -1,12 +1,12 @@
 import './AppLayout.styl'
 
-import * as React from 'react'
+import React from 'react'
 import { Navigator } from './Navigator.react'
 import { RightMenu } from './RightMenu.react'
 
 
 interface Props {
-  children: JSX.Element
+  children: React.ReactNode
   firstPage?: boolean
 }
 
