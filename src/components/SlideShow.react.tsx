@@ -1,6 +1,5 @@
 import './SlideShow.styl'
 
-import { CSSTransition } from 'react-transition-group'
 import ClassNames from 'classnames'
 import React from 'react'
 
@@ -34,44 +33,30 @@ export class SlideShow extends React.Component<Props, States> {
         <div className='slide-show__stage'>
           {
             this.state.prevSlide && (
-              <CSSTransition
-                key={`transition_slide_${this.state.prevSlide}`}
-                in
-                appear
-                timeout={500}
-                classNames='slide'
+              <div
+                key={`prev_slide_${this.state.prevSlide}`}
+                className={`slide-show__item ${
+                  this.state.prevSlide > this.state.slide
+                    ? '--slide-out-left'
+                    : '--slide-out-right'
+                }`}
               >
-                <div
-                  className={`slide-show__item ${
-                    this.state.prevSlide > this.state.slide
-                      ? '--slide-out-left'
-                      : '--slide-out-right'
-                  }`}
-                >
-                  { slides[this.state.prevSlide - 1] }
-                </div>
-              </CSSTransition>
+                { slides[this.state.prevSlide - 1] }
+              </div>
             )
           }
-          <CSSTransition
-            key={`transition_slide_${this.state.slide}`}
-            in
-            appear
-            timeout={500}
-            classNames='slide'
+          <div
+            key={`slide_${this.state.slide}`}
+            className={`slide-show__item ${
+              this.state.prevSlide
+                ? this.state.prevSlide > this.state.slide
+                  ? '--slide-in-left'
+                  : '--slide-in-right'
+                : ''
+            }`}
           >
-            <div
-              className={`slide-show__item ${
-                this.state.prevSlide
-                  ? this.state.prevSlide > this.state.slide
-                    ? '--slide-in-left'
-                    : '--slide-in-right'
-                  : ''
-              }`}
-            >
-              { slides[this.state.slide - 1] }
-            </div>
-          </CSSTransition>
+            { slides[this.state.slide - 1] }
+          </div>
         </div>
         {
           this.props.renderButtons?.([

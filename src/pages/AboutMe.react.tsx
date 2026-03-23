@@ -17,14 +17,12 @@ export const AboutMe = () => {
             About Me
           </div>
           <div className='about-me__detail'>
-             I am Krongkran Jitsil, a Full stack Web Engineer based in Paris.
-             You can call me Poopan. I’m a weird girl who likes creating weird things
-             in software development world. I like to resolve challenging problems and
-             imagine useful animations, developing rich web experiences & web applications.
+             I am Krongkran Jitsil, a Full stack Software Engineer based in Lyon.
+             You can call me Poopan. I fall in love with solving problems, developing the software,
+              everything around it, including myself everyday.
             <br/>
             <br/>
-             When not working or futzing around with code, I talk to my cats, shop for Hello Kitty,
-             and enjoy spa day with my freinds.
+             When not working or futzing around with code, I enjoy time with garden, my cats and relaxing days with podcast and Netflix.
           </div>
           <div className='about-me__next-navigator'>
             <Navigator to='/workexperiences' white >Work experiences</Navigator>

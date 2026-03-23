@@ -1,6 +1,5 @@
 import './Carousel.styl'
 
-import { CSSTransition } from 'react-transition-group'
 import React from 'react'
 
 interface Props {
@@ -27,25 +26,25 @@ export class Carousel extends React.Component<Props, States> {
   }
 
   public render () {
-    const items = this.props.items
+    const { items } = this.props
+    const { item, prevItem } = this.state
     return (
-      <div
-        className='carousel'
-      >
+      <div className='carousel'>
         <div className='carousel__stage'>
-          <CSSTransition
-            key={`transition_carousel_${this.state.item}`}
-            in
-            appear
-            timeout={500}
-            classNames='fade'
-          >
+          {prevItem !== undefined && (
             <div
-              className='carousel__item --fade-in'
+              key={`prev_${prevItem}`}
+              className='carousel__item --slide-out'
             >
-              { items[this.state.item - 1] }
+              {items[prevItem - 1]}
             </div>
-          </CSSTransition>
+          )}
+          <div
+            key={`curr_${item}`}
+            className='carousel__item --slide-in'
+          >
+            {items[item - 1]}
+          </div>
         </div>
       </div>
     )

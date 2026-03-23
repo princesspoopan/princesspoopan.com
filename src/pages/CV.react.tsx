@@ -13,7 +13,7 @@ export const CV = () => {
           <div className='cv__about-me-bg'>
             <img className='cv__image' src={poopanImg} />
             <div className='cv__header' >
-              Miss Krongkarn Jitsil
+              Krongkarn Jitsil
             </div>
             <DetailList
               items={[
@@ -21,7 +21,7 @@ export const CV = () => {
                   icon: 'user',
                   children: (
                     <div className='cv__about-me-description'>
-                      You can call me Poopan. I am Senior Software Engineer based in Paris, France.
+                      You can call me Poopan. I am currently as a Staff Software Engineer based in Lyon, France.
                       I like to resolve challenging problems, developing rich web experiences & web applications
                     </div>
                   )
