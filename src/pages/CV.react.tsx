@@ -21,8 +21,10 @@ export const CV = () => {
                   icon: 'user',
                   children: (
                     <div className='cv__about-me-description'>
-                      You can call me Poopan. I am currently as a Staff Software Engineer based in Lyon, France.
-                      I like to resolve challenging problems, developing rich web experiences & web applications
+                        Staff Software Engineer based in Lyon, France, specializing in full-stack development across frontend, backend, data engineering, and DevOps.
+                        I design and build scalable systems, tackle complex technical challenges, and drive engineering excellence.
+                        Solving problems by finding the most efficient solutions is my passion, which motivates me to keep learning and improving every day.
+                        I actively leverage AI tools to enhance productivity, streamline development workflows, and deliver high-impact yet simple and cost efficient solutions.
                     </div>
                   )
                 },
@@ -75,6 +77,60 @@ export const CV = () => {
                       <PeriodList
                         items={[
                           {
+                            key: 'staff-software-engineer-at-cs',
+                            header: (
+                                <span className='cv__work-experiences-title'>
+                                    Staff Software Engineer
+                                    <span className='cv__work-experiences-company'>
+                                        @ContentSquare Lyon, France
+                                    </span>
+                                </span>
+                            ),
+                            subHeader: 'Oct 2022 - present',
+                            text: (
+                                <div>
+                                    <div>
+                                        Focused on driving impact across teams, from data collection through data pipelines to applications.
+                                        Author RFCs (Request for Comments), design documents, and technical vision to guide engineering decisions.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Leverage technologies and tools to ensure cost efficiency and simplicity across projects.
+                                        Over the past two years, lead the migration of multiple pipelines, systems, and products from acquired companies (Heap and Hotjar) into a unified analytics platform, improving accessibility, adoption, and revenue growth.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Drive alignment across teams for high-stakes projects, ensuring clear communication with stakeholders.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Break down initiatives into milestones and sub-projects to deliver incremental value, ensure ROI, and enable phased delivery.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Lead the implementation phase involving schema design changes on ClickHouse and SingleStore, and build transport data layer components using Go, Kafka, and Flink for streaming pipelines.
+                                        Maintain and implement features in data enrichment services using Scala before data ingestion into databases.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Enhance capabilities in read-path and metadata services, and contribute to data collection systems using TypeScript, NestJS, TypeORM, and Redis for real-time communication between frontend and backend.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Manage and deploy services using Kubernetes and Helmfile, and implement data backup strategies using AWS S3 and Azure Blob Storage.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Implement and maintain CI/CD pipelines using GitHub Actions to automate testing, deployment, and release workflows.
+                                    </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>
+                                        Leverage AI tools to accelerate development, improve code quality, and increase test coverage, with early adoption of tools such as GitHub Copilot, Claude Code, and Dust.
+                                    </div>
+                                </div>
+                            )
+                          },
+                          {
                             key: 'sr-software-engineer-at-cs',
                             header: (
                               <span className='cv__work-experiences-title'>
@@ -84,10 +140,16 @@ export const CV = () => {
                                 </span>
                               </span>
                             ),
-                            subHeader: 'Nov 2017 - Present',
-                            text: 'Senior software engineer in R&D Application team, lead the projects,' +
-                            ' create implementation plan, design the architecture and the solution for the project.' +
-                            ' Mentoring the junior developers and onboarding the new joiners.'
+                            subHeader: 'Nov 2017 - Sep 2022',
+                            text: (
+                                <div>
+                                    <div>Built and maintained features for ContentSquare analytics tools using Angular, React, Vue.js, Webpack, and a micro-frontend architecture. </div>
+                                    <div>Developed and maintained microservices which migrated from monolith legacy services using TypeScript, Node.js, NestJS, and TypeORM to build CRUD systems connected to PostgreSQL. </div>
+                                    <div className="spacing">&nbsp;</div>
+                                    <div>Led a team of 4 engineers on a new product focused on merchandising analytics, including the migration of a pricing analysis module from an acquired company. </div>
+                                    <div>Worked in an Agile environment and coordinated closely with project managers, product managers and designers to ensure successful delivery. </div>
+                                </div>
+                            )
                           },
                           {
                             key: 'team-lead-at-taskworld',
@@ -100,11 +162,9 @@ export const CV = () => {
                               </span>
                             ),
                             subHeader: 'Nov 2016 — Sep 2017',
-                            text: 'Manage Frontend development team, using Agile methodology. ' +
-                            'My team responsibilites are maintenance ' +
-                            'and improve significant features in Taskworld in both web-based ' +
-                            'and mobile application. Also do code review, pair programming and ' +
-                            'help new team members to get onboard'
+                            text: 'Led the frontend engineering team using Agile methodologies, overseeing both project delivery and team development.' +
+                            'Responsible for maintaining and enhancing key features of Taskworld application across web and mobile applications. ' +
+                            'Conducted code reviews, facilitated pair programming, onboarded and mentored new team members and help with their continuous growth.'
                           },
                           {
                             key: 'web-engineer-at-taskworld',
@@ -117,61 +177,22 @@ export const CV = () => {
                               </span>
                             ),
                             subHeader: 'Nov 2015 — Oct 2016',
-                            text: 'Full stack developer, implement and improve significant features, ' +
-                            'such as Chat, Kanban board, Project Page to build and release ' +
-                            'the real-time project management application called Taskworld using ' +
-                            'ReactJS, Redux, ES2015, Babel, Webpack, NodeJS and MongoDB'
+                            text: 'Full-stack developer responsible for implementing and improving key features such as Chat, Kanban board, and Project Page. ' +
+                            'Contributed to building and delivering a real-time project management application (Taskworld) using React, Redux, ES2015, Babel, Webpack, Node.js, and MongoDB.'
                           },
                           {
-                            key: 'sr-software-engineer-at-tr',
+                            key: 'senior-software-engineer-at-tr',
                             header: (
                               <span className='cv__work-experiences-title'>
-                                Senior Software Engineer
+                                Software Engineer - Senior Software Engineer
                                 <span className='cv__work-experiences-company'>
                                   @Thomson Reuters Software Thailand
                                 </span>
                               </span>
                             ),
-                            subHeader: 'Mar 2013 — Oct 2015',
-                            text: 'Full stack developer, to build web application called What\'s New ' +
-                            'to distribute news, articles and feature ' +
-                            'releases using NodeJS, WCF, AngularJS'
-                          },
-                          {
-                            key: 'software-engineer-at-tr',
-                            header: (
-                              <span className='cv__work-experiences-title'>
-                                Software Engineer
-                                <span className='cv__work-experiences-company'>
-                                  @Thomson Reuters Software Thailand
-                                </span>
-                              </span>
-                            ),
-                            subHeader: 'May 2011 — Feb 2013',
-                            text: (
-                              <div>
-                                <div>&#9675; Implement and maintenance realtime data in Thomson Reuters Eikon using JavaScript.</div>
-                                <div>&nbsp;</div>
-                                <div>&#9675; Developed the SPA application for realtime Bonds data using NodeJS, jQuery, AngularJS, Backbone.js.</div>
-                                <div>&nbsp;</div>
-                                <div>&#9675; Implement CMS system to manage web pages which publish directly to Production for using Java, PHP, JavaScript.</div>
-                              </div>
-                            )
-                          },
-                          {
-                            key: 'associate-software-engineer-at-tr',
-                            header: (
-                              <span className='cv__work-experiences-title'>
-                                Associate Software Engineer
-                                <span className='cv__work-experiences-company'>
-                                  @Thomson Reuters Software Thailand
-                                </span>
-                              </span>
-                            ),
-                            subHeader: 'May 2009 — Apr 2011',
-                            text: 'View development, to build web pages and be ' +
-                            'the part of launching the first version of ' +
-                            'Thomson Reuters Eikon'
+                            subHeader: 'May 2009 — Oct 2015',
+                            text: 'Implemented the first version of Thomson Reuters Eikon by porting functionality from C# to a SPA application in JavaScript.' +
+                            ' Built features across both frontend and backend using Node.js, jQuery, AngularJS, Backbone.js, Java, and PHP.'
                           }
                         ]}
                       />
@@ -199,39 +220,29 @@ export const CV = () => {
                           items={[
                             {
                               key: 'programming-language-library',
-                              header: 'Programming languages/Library',
+                              header: 'Languages / Frameworks',
                               text: (
                                 <div className='cv__skill-items'>
-                                  HTML / CSS / JavaScript / ReactJS / Redux / Angular / AngularJS
-                                  / NodeJS / NestJS / Express / Karma / Jasmine / Enzyme / Jest / Selenium
-                                  / Robot Framework / Cypress
+                                    TypeScript, JavaScript, Java, Scala, Go, HTML, CSS, React, Redux, VueJS, Angular, AngularJS,
+                                    Node.js, NestJS, GraphQL, TypeORM, Jest, Karma, Jasmine, Enzyme, Selenium, Cypress, Robot Framework
                                 </div>
                               )
                             },
                             {
-                              key: 'git-repository',
-                              header: 'GIT Repository',
+                              key: 'data-streaming',
+                              header: 'Data & Streaming and cloud',
                               text: (
                                 <div className='cv__skill-items'>
-                                  GitHub / GitLab
+                                    Kafka, Flink, ClickHouse, SingleStore, Redis, PostgreSQL, MySQL, MongoDB, AWS (S3), Azure (Blob Storage)
                                 </div>
                               )
                             },
                             {
-                              key: 'building-automate-tools',
-                              header: 'Building Tools/Automate Tools',
+                              key: 'infra-devops',
+                              header: 'Infrastructure / DevOps',
                               text: (
                                 <div className='cv__skill-items'>
-                                  Webpack / Lerna / CircleCI / Jenkins
-                                </div>
-                              )
-                            },
-                            {
-                              key: 'database',
-                              header: 'Database',
-                              text: (
-                                <div className='cv__skill-items'>
-                                  MongoDB / Firebase DB / MySQL / Postgresql
+                                    Kubernetes, GitHub Actions, Jenkins, Terraform, Helmfile
                                 </div>
                               )
                             }

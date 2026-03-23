@@ -1,25 +1,28 @@
-## :construction: This is under reconstruction :construction:
+# princesspoopan.com
 
-# Welcome to princesspoopan.com
-
-  My personal website to store information about me, previous experience and portfolio.
+My personal website to store information about me, previous experience and portfolio.
 
 ### Technology Stack
-* React
-* Webpack
-* Karma
-* Yarn
-* Service Worker (To make my website work offline :smiley: )
+* React 19
+* Vite 6
+* TypeScript 5
+* Stylus
+* react-router-dom v6
+* Vitest
 
-Also after merge or commit to master (and test is green :green_heart:), the production build will be committed to princesspoopan.github.io automatically via __CircleCI__
+After merge to master (and tests pass), the production build is automatically deployed to princesspoopan.github.io via **GitHub Actions**.
 
 ### How to run the project
-`yarn && yarn run dev`
+```
+npm install && npm run dev
+```
 
-### How to run test
-`yarn run test`
+### How to run tests
+```
+npm test
+```
 
 ### How to build the project
-`yarn run build`
-
-
+```
+npm run build
+```
