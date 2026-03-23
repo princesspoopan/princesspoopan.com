@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test -- --run
+
+      - run: npm run build
+
+      - name: Deploy to princesspoopan.github.io
+        env:
+          GH_EMAIL: ${{ secrets.GH_EMAIL }}
+          GH_NAME: ${{ secrets.GH_NAME }}
+        run: |
+          git config --global user.email "$GH_EMAIL"
+          git config --global user.name "$GH_NAME"
+          eval "$(ssh-agent -s)"
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" | ssh-add -
+          git clone git@github.com:princesspoopan/princesspoopan.github.io.git
+          cd princesspoopan.github.io
+          yes | cp -rf ../dist/* ./
+          git add .
+          git commit --allow-empty -m ':rocket: auto deployment'
+          git push -f
