@@ -6,7 +6,7 @@ import CV from './CV.react'
 describe('<CV />', () => {
   it('renders .cv', () => {
     render(
-      <MemoryRouter>
+      <MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <CV />
       </MemoryRouter>
     )
@@ -15,7 +15,7 @@ describe('<CV />', () => {
 
   it('renders the name header', () => {
     render(
-      <MemoryRouter>
+      <MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <CV />
       </MemoryRouter>
     )
