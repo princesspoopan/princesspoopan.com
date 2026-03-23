@@ -19,6 +19,6 @@ describe('<CV />', () => {
         <CV />
       </MemoryRouter>
     )
-    expect(screen.getByText('Miss Krongkarn Jitsil')).toBeDefined()
+    expect(screen.getByText('Krongkarn Jitsil')).toBeDefined()
   })
 })
