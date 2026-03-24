@@ -149,7 +149,7 @@ export const CV = () => {
                             text: (
                                 <div>
                                     <div>
-                                        Focused on driving impact across teams, from data collection through data pipelines to applications.
+                                        Focusing on driving impact across teams, from data collection through data pipelines to applications.
                                         Author RFCs (Request for Comments), design documents, and technical vision to guide engineering decisions.
                                     </div>
                                     <div className="spacing">&nbsp;</div>
