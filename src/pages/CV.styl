@@ -67,6 +67,12 @@ small-screen-break-point = 950px
     padding-left: 5px
 
 @media print
+  *
+    -webkit-print-color-adjust exact
+    print-color-adjust exact
+    -webkit-font-smoothing antialiased
+    text-rendering optimizeLegibility
+
   .cv
     padding 0
 
